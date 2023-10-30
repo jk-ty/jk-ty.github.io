@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>5、多表查询 | 我的学习分享</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <script charset="utf-8" src="/js/custom.js"></script>
+    <meta name="description" content="己不由心，身又岂能由己。">
+    <meta name="keywords" content="Broad Tao,vuepress,自建博客,Broad Tao">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="robots" content="all">
+    <meta name="author" content="Broad Tao">
+    
+    <link rel="preload" href="/assets/css/0.styles.13129a82.css" as="style"><link rel="preload" href="/assets/js/app.368f64c4.js" as="script"><link rel="preload" href="/assets/js/20.a07337f3.js" as="script"><link rel="preload" href="/assets/js/1.140bedef.js" as="script"><link rel="preload" href="/assets/js/42.190b3589.js" as="script"><link rel="preload" href="/assets/js/44.82d112be.js" as="script"><link rel="prefetch" href="/assets/js/10.84a4bc76.js"><link rel="prefetch" href="/assets/js/11.74304a50.js"><link rel="prefetch" href="/assets/js/12.e5fdb1f3.js"><link rel="prefetch" href="/assets/js/13.7c977e56.js"><link rel="prefetch" href="/assets/js/14.9c9c6116.js"><link rel="prefetch" href="/assets/js/15.69860740.js"><link rel="prefetch" href="/assets/js/16.878c604a.js"><link rel="prefetch" href="/assets/js/17.f8be178b.js"><link rel="prefetch" href="/assets/js/18.8d2c943c.js"><link rel="prefetch" href="/assets/js/19.a3a4cb45.js"><link rel="prefetch" href="/assets/js/21.e1d85675.js"><link rel="prefetch" href="/assets/js/22.f950f59e.js"><link rel="prefetch" href="/assets/js/23.016eff4b.js"><link rel="prefetch" href="/assets/js/24.c274e618.js"><link rel="prefetch" href="/assets/js/25.1577a4bb.js"><link rel="prefetch" href="/assets/js/26.49375a6d.js"><link rel="prefetch" href="/assets/js/27.4ab97d60.js"><link rel="prefetch" href="/assets/js/28.c6e2060c.js"><link rel="prefetch" href="/assets/js/29.3f589d75.js"><link rel="prefetch" href="/assets/js/30.c91d0847.js"><link rel="prefetch" href="/assets/js/31.831f8840.js"><link rel="prefetch" href="/assets/js/32.e636b7e5.js"><link rel="prefetch" href="/assets/js/33.fccc87bd.js"><link rel="prefetch" href="/assets/js/34.a5aa89dc.js"><link rel="prefetch" href="/assets/js/35.c6d8ee42.js"><link rel="prefetch" href="/assets/js/36.29ada5a4.js"><link rel="prefetch" href="/assets/js/37.1076c222.js"><link rel="prefetch" href="/assets/js/38.0f14ec92.js"><link rel="prefetch" href="/assets/js/39.aa21d927.js"><link rel="prefetch" href="/assets/js/4.ef239fdc.js"><link rel="prefetch" href="/assets/js/40.25a83a4c.js"><link rel="prefetch" href="/assets/js/41.442cf9f8.js"><link rel="prefetch" href="/assets/js/43.9d225e14.js"><link rel="prefetch" href="/assets/js/45.827d8704.js"><link rel="prefetch" href="/assets/js/46.fbf978bb.js"><link rel="prefetch" href="/assets/js/47.54b48594.js"><link rel="prefetch" href="/assets/js/48.5630b271.js"><link rel="prefetch" href="/assets/js/49.5c8cc701.js"><link rel="prefetch" href="/assets/js/5.567c18a5.js"><link rel="prefetch" href="/assets/js/50.a6e5dd21.js"><link rel="prefetch" href="/assets/js/51.c2ca8fc9.js"><link rel="prefetch" href="/assets/js/52.553b32c3.js"><link rel="prefetch" href="/assets/js/53.1345a25a.js"><link rel="prefetch" href="/assets/js/54.7d45901e.js"><link rel="prefetch" href="/assets/js/55.e642e2ff.js"><link rel="prefetch" href="/assets/js/56.91833c5a.js"><link rel="prefetch" href="/assets/js/57.39615577.js"><link rel="prefetch" href="/assets/js/58.4c444ea9.js"><link rel="prefetch" href="/assets/js/59.8e98294e.js"><link rel="prefetch" href="/assets/js/6.2939a692.js"><link rel="prefetch" href="/assets/js/60.749a855b.js"><link rel="prefetch" href="/assets/js/61.ce1190f8.js"><link rel="prefetch" href="/assets/js/62.afb3823d.js"><link rel="prefetch" href="/assets/js/63.299fb01e.js"><link rel="prefetch" href="/assets/js/64.81fbdf0b.js"><link rel="prefetch" href="/assets/js/65.c90ffa1c.js"><link rel="prefetch" href="/assets/js/66.e3ce52be.js"><link rel="prefetch" href="/assets/js/67.a9b2ef30.js"><link rel="prefetch" href="/assets/js/68.f180eddd.js"><link rel="prefetch" href="/assets/js/69.c8d6122a.js"><link rel="prefetch" href="/assets/js/7.71815629.js"><link rel="prefetch" href="/assets/js/70.b935c49c.js"><link rel="prefetch" href="/assets/js/71.99cdd17c.js"><link rel="prefetch" href="/assets/js/72.580621cf.js"><link rel="prefetch" href="/assets/js/73.bc0dc747.js"><link rel="prefetch" href="/assets/js/74.da73099e.js"><link rel="prefetch" href="/assets/js/75.aeb7cdd0.js"><link rel="prefetch" href="/assets/js/76.f4f90de8.js"><link rel="prefetch" href="/assets/js/8.73301c16.js"><link rel="prefetch" href="/assets/js/9.2d4d0c4d.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.914d6aa8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.13129a82.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-4698c43e><div data-v-4698c43e><div id="loader-wrapper" class="loading-wrapper" data-v-1c4f0192 data-v-4698c43e data-v-4698c43e><div class="loader-main" data-v-1c4f0192><div data-v-1c4f0192></div><div data-v-1c4f0192></div><div data-v-1c4f0192></div><div data-v-1c4f0192></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-6cbeab0a data-v-4698c43e data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>我的学习分享</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>Broad Tao</span>
+            
+          <span data-v-6cbeab0a>2022 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-4698c43e><header class="navbar" data-v-4698c43e><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">我的学习分享</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/技术文章/项目/本网站的搭建服务器端.html" class="nav-link"><i class="iconfont reco-eye"></i>
+  项目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-faq"></i>
+      框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>spring</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring01/Spring_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-01
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring02/Spring_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-02
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring03/Spring_day03.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring AOP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-01/SpringMVC_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SpringMVC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-02/SpringMVC_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SSM整合
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Springboot/Springboot.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Springboot
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      JAVA
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/java/javase.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JavaSE
+</a></li></ul></li><li class="dropdown-item"><h4>JAVA WEB</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/javaweb/mysql/1、mysql安装.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MySQL
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JDBC/JDBC.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JDBC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Maven/Maven.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Maven
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/MyBatis/MyBatis1.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MyBatis
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/web核心/1、Web概述.html" class="nav-link"><i class="iconfont undefined"></i>
+  --HTTP&amp;Tomcat&amp;Servlet
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Request&amp;Response/Request&amp;Response.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Request&amp;Response
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JSP/JSP.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JSP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/会话技术/会话技术.html" class="nav-link"><i class="iconfont undefined"></i>
+  --会话技术
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Filter&amp;Listener&amp;Ajax/Filter&amp;Listener&amp;Ajax.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Filter&amp;Listener&amp;Ajax
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/VUE&amp;Element/VUE&amp;Element.html" class="nav-link"><i class="iconfont undefined"></i>
+  --VUE&amp;Element
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/综合案例/综合案例.html" class="nav-link"><i class="iconfont undefined"></i>
+  --综合案例
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/前端/html/html.html" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/css/2022-07-05-CSS.html" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/JavaScript/JavaScript.html" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      Python
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/python/python基础.html" class="nav-link"><i class="iconfont undefined"></i>
+  python基础
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/python/python爬虫.html" class="nav-link"><i class="iconfont undefined"></i>
+  python爬虫
+</a></li></ul></div></div><div class="nav-item"><a href="/技术文章/生活分享/分享.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  生活分享
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-4698c43e></div> <aside class="sidebar" data-v-4698c43e><div class="personal-info-wrapper" data-v-6c8ffc9c><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-6c8ffc9c> <h3 class="name" data-v-6c8ffc9c>
+    Broad Tao
+  </h3> <div class="num" data-v-6c8ffc9c><div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>25</h3> <h6 data-v-6c8ffc9c>文章</h6></div> <div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>31</h3> <h6 data-v-6c8ffc9c>标签</h6></div></div> <hr data-v-6c8ffc9c></div> <nav class="nav-links"><div class="nav-item"><a href="/技术文章/项目/本网站的搭建服务器端.html" class="nav-link"><i class="iconfont reco-eye"></i>
+  项目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-faq"></i>
+      框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>spring</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring01/Spring_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-01
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring02/Spring_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-02
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring03/Spring_day03.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring AOP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-01/SpringMVC_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SpringMVC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-02/SpringMVC_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SSM整合
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Springboot/Springboot.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Springboot
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      JAVA
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/java/javase.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JavaSE
+</a></li></ul></li><li class="dropdown-item"><h4>JAVA WEB</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/javaweb/mysql/1、mysql安装.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MySQL
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JDBC/JDBC.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JDBC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Maven/Maven.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Maven
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/MyBatis/MyBatis1.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MyBatis
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/web核心/1、Web概述.html" class="nav-link"><i class="iconfont undefined"></i>
+  --HTTP&amp;Tomcat&amp;Servlet
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Request&amp;Response/Request&amp;Response.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Request&amp;Response
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JSP/JSP.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JSP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/会话技术/会话技术.html" class="nav-link"><i class="iconfont undefined"></i>
+  --会话技术
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Filter&amp;Listener&amp;Ajax/Filter&amp;Listener&amp;Ajax.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Filter&amp;Listener&amp;Ajax
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/VUE&amp;Element/VUE&amp;Element.html" class="nav-link"><i class="iconfont undefined"></i>
+  --VUE&amp;Element
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/综合案例/综合案例.html" class="nav-link"><i class="iconfont undefined"></i>
+  --综合案例
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/前端/html/html.html" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/css/2022-07-05-CSS.html" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/JavaScript/JavaScript.html" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      Python
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/python/python基础.html" class="nav-link"><i class="iconfont undefined"></i>
+  python基础
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/python/python爬虫.html" class="nav-link"><i class="iconfont undefined"></i>
+  python爬虫
+</a></li></ul></div></div><div class="nav-item"><a href="/技术文章/生活分享/分享.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  生活分享
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>mysql</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/技术文章/Javaweb/mysql/1、mysql安装.html" class="sidebar-link">MySQL</a></li><li><a href="/技术文章/Javaweb/mysql/2、基础语法.html" class="sidebar-link">2、基础语法</a></li><li><a href="/技术文章/Javaweb/mysql/3、函数.html" class="sidebar-link">3、函数</a></li><li><a href="/技术文章/Javaweb/mysql/4、约束.html" class="sidebar-link">4、约束</a></li><li><a href="/技术文章/Javaweb/mysql/5.多表查询.html" class="active sidebar-link">5、多表查询</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/技术文章/Javaweb/mysql/5.多表查询.html#_1、多表关系" class="sidebar-link">1、多表关系</a></li><li class="sidebar-sub-header"><a href="/技术文章/Javaweb/mysql/5.多表查询.html#_2、多表查询概述" class="sidebar-link">2、多表查询概述</a></li><li class="sidebar-sub-header"><a href="/技术文章/Javaweb/mysql/5.多表查询.html#_3、内连接" class="sidebar-link">3、内连接</a></li><li class="sidebar-sub-header"><a href="/技术文章/Javaweb/mysql/5.多表查询.html#_4、外连接" class="sidebar-link">4、外连接</a></li><li class="sidebar-sub-header"><a href="/技术文章/Javaweb/mysql/5.多表查询.html#_5、自连接" class="sidebar-link">5、自连接</a></li><li class="sidebar-sub-header"><a href="/技术文章/Javaweb/mysql/5.多表查询.html#_6、子查询" class="sidebar-link">6、子查询</a></li><li class="sidebar-sub-header"><a href="/技术文章/Javaweb/mysql/5.多表查询.html#_7、多表查询案例" class="sidebar-link">7、多表查询案例</a></li></ul></li><li><a href="/技术文章/Javaweb/mysql/6、事务.html" class="sidebar-link">6、事物</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-6cbeab0a data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a></h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>Broad Tao</span>
+            
+          <span data-v-6cbeab0a>2022 - </span>
+          2023
+        </a></span></div></div> <div data-v-4698c43e><main class="page"><!----> <div class="page-title" style="display:none;"><h1>5、多表查询</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>Broad Tao</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="_5、多表查询"><a href="#_5、多表查询" class="header-anchor">#</a> 5、多表查询</h1> <h2 id="_1、多表关系"><a href="#_1、多表关系" class="header-anchor">#</a> 1、多表关系</h2> <p>项目开发中，在进行数据库表结构设计时，会根据业务需求及业务模块之间的关系，分析并设计表结
+构，由于业务之间相互关联，所以各个表结构之间也存在着各种联系，基本上分为三种：
+----一对多(多对一)
+----多对多
+----一对一</p> <h3 id="_1-、一对多-多对一"><a href="#_1-、一对多-多对一" class="header-anchor">#</a> 1）、一对多(多对一)</h3> <p>案例: 部门 与 员工的关系
+关系: 一个部门对应多个员工，一个员工对应一个部门
+实现: 在多的一方建立外键，指向一的一方的主键</p> <h3 id="_2-、多对多"><a href="#_2-、多对多" class="header-anchor">#</a> 2）、多对多</h3> <p>案例: 学生 与 课程的关系
+关系: 一个学生可以选修多门课程，一门课程也可以供多个学生选择
+实现: 建立第三张中间表，中间表至少包含两个外键，分别关联两方主键</p> <p><img src="/assets/img/1.9b523969.png" alt="1"></p> <p>对应的SQL脚本:</p> <div class="language-MYSQL line-numbers-mode"><pre class="language-text"><code>create table student(
+id int auto_increment primary key comment '主键ID',
+name varchar(10) comment '姓名',
+no varchar(10) comment '学号'
+) comment '学生表';
+insert into student values (null, '黛绮丝', '2000100101'),(null, '谢逊',
+'2000100102'),(null, '殷天正', '2000100103'),(null, '韦一笑', '2000100104');
+create table course(
+id int auto_increment primary key comment '主键ID',
+name varchar(10) comment '课程名称'
+) comment '课程表';
+insert into course values (null, 'Java'), (null, 'PHP'), (null , 'MySQL') ,
+(null, 'Hadoop');
+create table student_course(
+id int auto_increment comment '主键' primary key,
+studentid int not null comment '学生ID',
+courseid int not null comment '课程ID',
+constraint fk_courseid foreign key (courseid) references course (id),
+constraint fk_studentid foreign key (studentid) references student (id)
+)comment '学生课程中间表';
+insert into student_course values (null,1,1),(null,1,2),(null,1,3),(null,2,2),
+(null,2,3),(null,3,4);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h3 id="_3-、一对一"><a href="#_3-、一对一" class="header-anchor">#</a> 3）、一对一</h3> <p>案例: 用户 与 用户详情的关系
+关系: 一对一关系，多用于单表拆分，将一张表的基础字段放在一张表中，其他详情字段放在另
+一张表中，以提升操作效率
+实现: 在任意一方加入外键，关联另外一方的主键，并且设置外键为唯一的(UNIQUE)</p> <p><img src="/assets/img/2.98366004.png" alt="1"></p> <p>对应的SQL脚本:</p> <div class="language-MYSQL line-numbers-mode"><pre class="language-text"><code>create table tb_user(
+id int auto_increment primary key comment '主键ID',
+name varchar(10) comment '姓名',
+age int comment '年龄',
+gender char(1) comment '1: 男 , 2: 女',
+phone char(11) comment '手机号'
+) comment '用户基本信息表';
+create table tb_user_edu(
+id int auto_increment primary key comment '主键ID',
+degree varchar(20) comment '学历',
+major varchar(50) comment '专业',
+primaryschool varchar(50) comment '小学',
+middleschool varchar(50) comment '中学',
+university varchar(50) comment '大学',
+userid int unique comment '用户ID',
+constraint fk_userid foreign key (userid) references tb_user(id)
+) comment '用户教育信息表';
+insert into tb_user(id, name, age, gender, phone) values
+(null,'黄渤',45,'1','18800001111'),
+(null,'冰冰',35,'2','18800002222'),
+(null,'码云',55,'1','18800008888'),
+(null,'李彦宏',50,'1','18800009999');
+insert into tb_user_edu(id, degree, major, primaryschool, middleschool,
+university, userid) values
+(null,'本科','舞蹈','静安区第一小学','静安区第一中学','北京舞蹈学院',1),
+(null,'硕士','表演','朝阳区第一小学','朝阳区第一中学','北京电影学院',2),
+(null,'本科','英语','杭州市第一小学','杭州市第一中学','杭州师范大学',3),
+(null,'本科','应用数学','阳泉第一小学','阳泉区第一中学','清华大学',4);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h2 id="_2、多表查询概述"><a href="#_2、多表查询概述" class="header-anchor">#</a> 2、多表查询概述</h2> <h3 id="_1-数据准备"><a href="#_1-数据准备" class="header-anchor">#</a> 1.数据准备</h3> <p>1). 删除之前 emp, dept表的测试数据
+2). 执行如下脚本，创建emp表与dept表并插入测试数据</p> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>-- 创建dept表，并插入数据
+create table dept(
+id int auto_increment comment 'ID' primary key,
+name varchar(50) not null comment '部门名称'
+)comment '部门表';
+INSERT INTO dept (id, name) VALUES (1, '研发部'), (2, '市场部'),(3, '财务部'), (4,
+'销售部'), (5, '总经办'), (6, '人事部');
+-- 创建emp表，并插入数据
+create table emp(
+id int auto_increment comment 'ID' primary key,
+name varchar(50) not null comment '姓名',
+age int comment '年龄',
+job varchar(20) comment '职位',
+salary int comment '薪资',
+entrydate date comment '入职时间',
+managerid int comment '直属领导ID',
+dept_id int comment '部门ID'
+)comment '员工表';
+-- 添加外键
+alter table emp add constraint fk_emp_dept_id foreign key (dept_id) references
+dept(id);
+INSERT INTO emp (id, name, age, job,salary, entrydate, managerid, dept_id)
+VALUES
+(1, '金庸', 66, '总裁',20000, '2000-01-01', null,5),
+(2, '张无忌', 20, '项目经理',12500, '2005-12-05', 1,1),
+(3, '杨逍', 33, '开发', 8400,'2000-11-03', 2,1),
+(4, '韦一笑', 48, '开发',11000, '2002-02-05', 2,1),
+(5, '常遇春', 43, '开发',10500, '2004-09-07', 3,1),
+(6, '小昭', 19, '程序员鼓励师',6600, '2004-10-12', 2,1),
+(7, '灭绝', 60, '财务总监',8500, '2002-09-12', 1,3),
+(8, '周芷若', 19, '会计',48000, '2006-06-02', 7,3),
+(9, '丁敏君', 23, '出纳',5250, '2009-05-13', 7,3),
+(10, '赵敏', 20, '市场部总监',12500, '2004-10-12', 1,2),
+(11, '鹿杖客', 56, '职员',3750, '2006-10-03', 10,2),
+(12, '鹤笔翁', 19, '职员',3750, '2007-05-09', 10,2),
+(13, '方东白', 19, '职员',5500, '2009-02-12', 10,2),
+(14, '张三丰', 88, '销售总监',14000, '2004-10-12', 1,4),
+(15, '俞莲舟', 38, '销售',4600, '2004-10-12', 14,4),
+(16, '宋远桥', 40, '销售',4600, '2004-10-12', 14,4),
+(17, '陈友谅', 42, null,2000, '2011-10-12', 1,null);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><p>dept表共6条记录，emp表共17条记录。</p> <h3 id="_2-概述"><a href="#_2-概述" class="header-anchor">#</a> 2.概述</h3> <p>多表查询就是指从多张表中查询数据</p> <p>原来查询单表数据，执行的SQL形式为：select * from emp;</p> <p>那么我们要执行多表查询，就只需要使用逗号分隔多张表即可，如： select * from emp , dept</p> <p>此时,我们看到查询结果中包含了大量的结果集，总共102条记录，而这其实就是员工表emp所有的记录</p> <p>(17) 与 部门表dept所有记录(6) 的所有组合情况，这种现象称之为笛卡尔积。接下来，就来简单介绍下笛卡尔积。</p> <p>笛卡尔积: 笛卡尔乘积是指在数学中，两个集合A集合 和 B集合的所有组合情况。</p> <p>而在多表查询中，我们是需要消除无效的笛卡尔积的，只保留两张表关联部分的数据。</p> <p>在SQL语句中，如何来去除无效的笛卡尔积呢？ 我们可以给多表查询加上连接查询的条件即可。</p> <p>select * from emp , dept where emp.dept_id = dept.id;</p> <p>而由于id为17的员工，没有dept_id字段值，所以在多表查询时，根据连接查询的条件并没有查询到。</p> <h3 id="_3-分类"><a href="#_3-分类" class="header-anchor">#</a> 3.分类</h3> <p>连接查询
+​	内连接：相当于查询A、B交集部分数据
+​	外连接：
+​	左外连接：查询左表所有数据，以及两张表交集部分数据
+​	右外连接：查询右表所有数据，以及两张表交集部分数据
+​	自连接：当前表与自身的连接查询，自连接必须使用表别名
+子查询</p> <p><img src="/assets/img/3.25cef232.png" alt="1"></p> <h2 id="_3、内连接"><a href="#_3、内连接" class="header-anchor">#</a> 3、内连接</h2> <p>内连接查询的是两张表交集部分的数据。(也就是绿色部分的数据)</p> <p><img src="/assets/img/3.25cef232.png" alt="1"></p> <p>内连接的语法分为两种: 隐式内连接、显式内连接。先来学习一下具体的语法结构。</p> <h3 id="_1-隐式内连接"><a href="#_1-隐式内连接" class="header-anchor">#</a> 1). 隐式内连接</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT 字段列表 FROM 表1 , 表2 WHERE 条件 ... ;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_2-显式内连接"><a href="#_2-显式内连接" class="header-anchor">#</a> 2). 显式内连接</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT 字段列表 FROM 表1 [ INNER ] JOIN 表2 ON 连接条件 ... ;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>案例:</p> <p>A. 查询每一个员工的姓名 , 及关联的部门的名称 (隐式内连接实现)
+表结构: emp , dept
+连接条件: emp.dept_id = dept.id</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select emp.name , dept.name from emp , dept where emp.dept_id = dept.id ;
+-- 为每一张表起别名,简化SQL编写
+select e.name,d.name from emp e , dept d where e.dept_id = d.id;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>B. 查询每一个员工的姓名 , 及关联的部门的名称 (显式内连接实现) --- INNER JOIN ...
+ON ...
+表结构: emp , dept
+连接条件: emp.dept_id = dept.id</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select e.name, d.name from emp e inner join dept d on e.dept_id = d.id;
+-- 为每一张表起别名,简化SQL编写
+select e.name, d.name from emp e join dept d on e.dept_id = d.id;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="表的别名"><a href="#表的别名" class="header-anchor">#</a> 表的别名:</h3> <p>①. tablea as 别名1 , tableb as 别名2 ;
+②. tablea 别名1 , tableb 别名2 ;</p> <p>注意：</p> <p>​	一旦为表起了别名，就不能再使用表名来指定对应的字段了，此时只能够使用别名来指定字
+段。</p> <h2 id="_4、外连接"><a href="#_4、外连接" class="header-anchor">#</a> 4、外连接</h2> <p><img src="/assets/img/3.25cef232.png" alt="1"></p> <p>外连接分为两种，分别是：左外连接 和 右外连接。具体的语法结构为：</p> <h3 id="_1-左外连接"><a href="#_1-左外连接" class="header-anchor">#</a> 1). 左外连接</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT 字段列表 FROM 表1 LEFT [ OUTER ] JOIN 表2 ON 条件 ... ;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>左外连接相当于查询表1(左表)的所有数据，当然也包含表1和表2交集部分的数据。</p> <h3 id="_2-右外连接"><a href="#_2-右外连接" class="header-anchor">#</a> 2). 右外连接</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT 字段列表 FROM 表1 RIGHT [ OUTER ] JOIN 表2 ON 条件 ... ;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>右外连接相当于查询表2(右表)的所有数据，当然也包含表1和表2交集部分的数据。</p> <p>案例:
+A. 查询emp表的所有数据, 和对应的部门信息
+由于需求中提到，要查询emp的所有数据，所以是不能内连接查询的，需要考虑使用外连接查询。
+表结构: emp, dept
+连接条件: emp.dept_id = dept.id</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select e.*, d.name from emp e left outer join dept d on e.dept_id = d.id;
+select e.*, d.name from emp e left join dept d on e.dept_id = d.id;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>B. 查询dept表的所有数据, 和对应的员工信息(右外连接)</p> <p>由于需求中提到，要查询dept表的所有数据，所以是不能内连接查询的，需要考虑使用外连接查
+询。
+表结构: emp, dept
+连接条件: emp.dept_id = dept.id</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select d.*, e.* from emp e right outer join dept d on e.dept_id = d.id;
+select d.*, e.* from dept d left outer join emp e on e.dept_id = d.id;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>注意：
+左外连接和右外连接是可以相互替换的，只需要调整在连接查询时SQL中，表结构的先后顺
+序就可以了。而我们在日常开发使用时，更偏向于左外连接。</p> <h2 id="_5、自连接"><a href="#_5、自连接" class="header-anchor">#</a> 5、自连接</h2> <h3 id="_1-自连接查询"><a href="#_1-自连接查询" class="header-anchor">#</a> 1.自连接查询</h3> <p>自连接查询，顾名思义，就是自己连接自己，也就是把一张表连接查询多次。我们先来学习一下自连接
+的查询语法：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT 字段列表 FROM 表A 别名A JOIN 表A 别名B ON 条件 ... ;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>而对于自连接查询，可以是内连接查询，也可以是外连接查询。</p> <p>案例：
+A. 查询员工 及其 所属领导的名字
+表结构: emp</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select a.name , b.name from emp a , emp b where a.managerid = b.id;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>B. 查询所有员工 emp 及其领导的名字 emp , 如果员工没有领导, 也需要查询出来
+表结构: emp a , emp b</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select a.name '员工', b.name '领导' from emp a left join emp b on a.managerid =b.id;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>注意:
+在自连接查询中，必须要为表起别名，要不然我们不清楚所指定的条件、返回的字段，到底
+是哪一张表的字段。</p> <h3 id="_2-联合查询"><a href="#_2-联合查询" class="header-anchor">#</a> 2.联合查询</h3> <p>对于union查询，就是把多次查询的结果合并起来，形成一个新的查询结果集。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT 字段列表 FROM 表A ...
+UNION [ ALL ]
+SELECT 字段列表 FROM 表B ....;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>对于联合查询的多张表的列数必须保持一致，字段类型也需要保持一致。
+union all 会将全部的数据直接合并在一起，union 会对合并之后的数据去重。</p> <p>案例:
+A. 将薪资低于 5000 的员工 , 和 年龄大于 50 岁的员工全部查询出来.
+当前对于这个需求，我们可以直接使用多条件查询，使用逻辑运算符 or 连接即可。 那这里呢，我们
+也可以通过union/union all来联合查询.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select * from emp where salary &lt; 5000
+union all
+select * from emp where age &gt; 50;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>union all查询出来的结果，仅仅进行简单的合并，并未去重</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select * from emp where salary &lt; 5000
+union
+select * from emp where age &gt; 50;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>union 联合查询，会对查询出来的结果进行去重处理。</p> <p>注意：
+如果多条查询语句查询出来的结果，字段数量不一致，在进行union/union all联合查询时，将会报
+错。</p> <h2 id="_6、子查询"><a href="#_6、子查询" class="header-anchor">#</a> 6、子查询</h2> <h3 id="_1-概述"><a href="#_1-概述" class="header-anchor">#</a> 1.概述</h3> <h4 id="_1-概念"><a href="#_1-概念" class="header-anchor">#</a> 1). 概念</h4> <p>SQL语句中嵌套SELECT语句，称为嵌套查询，又称子查询。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT * FROM t1 WHERE column1 = ( SELECT column1 FROM t2 );
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>子查询外部的语句可以是INSERT / UPDATE / DELETE / SELECT 的任何一个。</p> <h4 id="_2-分类"><a href="#_2-分类" class="header-anchor">#</a> 2). 分类</h4> <p>根据子查询结果不同，分为：
+A. 标量子查询（子查询结果为单个值）
+B. 列子查询(子查询结果为一列)
+C. 行子查询(子查询结果为一行)
+D. 表子查询(子查询结果为多行多列)</p> <p>根据子查询位置，分为：
+A. WHERE之后
+B. FROM之后
+C. SELECT之后</p> <h3 id="_2-标量子查询"><a href="#_2-标量子查询" class="header-anchor">#</a> 2.标量子查询</h3> <p>子查询返回的结果是单个值（数字、字符串、日期等），最简单的形式，这种子查询称为标量子查询。
+常用的操作符：= &lt;&gt; &gt; &gt;= &lt; &lt;=</p> <p>案例:
+A. 查询 &quot;销售部&quot; 的所有员工信息
+完成这个需求时，我们可以将需求分解为两步：</p> <p>①. 查询 &quot;销售部&quot; 部门ID</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select id from dept where name = '销售部';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>②. 根据 &quot;销售部&quot; 部门ID, 查询员工信息</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select * from emp where dept_id = (select id from dept where name = '销售部');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>B. 查询在 &quot;方东白&quot; 入职之后的员工信息
+完成这个需求时，我们可以将需求分解为两步：</p> <p>①. 查询 方东白 的入职日期</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select entrydate from emp where name = '方东白';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>②. 查询指定入职日期之后入职的员工信息</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select * from emp where entrydate &gt; (select entrydate from emp where name = '方东白');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_3-列子查询"><a href="#_3-列子查询" class="header-anchor">#</a> 3.列子查询</h3> <p>子查询返回的结果是一列（可以是多行），这种子查询称为列子查询。
+常用的操作符：IN 、NOT IN 、 ANY 、SOME 、 ALL</p> <table><thead><tr><th>操作符</th> <th>描述</th></tr></thead> <tbody><tr><td>IN</td> <td>在指定的集合范围之内，多选一</td></tr> <tr><td>NOT IN</td> <td>不在指定的集合范围之内</td></tr> <tr><td>ANY</td> <td>子查询返回列表中，有任意一个满足即可</td></tr> <tr><td>SOME</td> <td>与ANY等同，使用SOME的地方都可以使用ANY</td></tr> <tr><td>ALL</td> <td>子查询返回列表的所有值都必须满足</td></tr></tbody></table> <p>案例:
+A. 查询 &quot;销售部&quot; 和 &quot;市场部&quot; 的所有员工信息</p> <p>分解为以下两步:</p> <p>①. 查询 &quot;销售部&quot; 和 &quot;市场部&quot; 的部门ID</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select id from dept where name = '销售部' or name = '市场部';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>②. 根据部门ID, 查询员工信息</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select * from emp where dept_id in (select id from dept where name = '销售部' or name = '市场部');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>B. 查询比 财务部 所有人工资都高的员工信息</p> <p>分解为以下两步:</p> <p>①. 查询所有 财务部 人员工资</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select id from dept where name = '财务部';
+select salary from emp where dept_id = (select id from dept where name = '财务部');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>②. 比 财务部 所有人工资都高的员工信息</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select * from emp where salary &gt; all ( select salary from emp where dept_id =
+(select id from dept where name = '财务部') );
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>C. 查询比研发部其中任意一人工资高的员工信息</p> <p>分解为以下两步:</p> <p>①. 查询研发部所有人工资</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select salary from emp where dept_id = (select id from dept where name = '研发部');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>②. 比研发部其中任意一人工资高的员工信息</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select * from emp where salary &gt; any ( select salary from emp where dept_id =
+(select id from dept where name = '研发部') );
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_4-行子查询"><a href="#_4-行子查询" class="header-anchor">#</a> 4.行子查询</h3> <p>子查询返回的结果是一行（可以是多列），这种子查询称为行子查询。
+常用的操作符：= 、&lt;&gt; 、IN 、NOT IN</p> <p>案例:</p> <p>A. 查询与 &quot;张无忌&quot; 的薪资及直属领导相同的员工信息 ;</p> <p>这个需求同样可以拆解为两步进行:</p> <p>①. 查询 &quot;张无忌&quot; 的薪资及直属领导</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select salary, managerid from emp where name = '张无忌';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>②. 查询与 &quot;张无忌&quot; 的薪资及直属领导相同的员工信息 ;</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select * from emp where (salary,managerid) = (select salary, managerid from emp
+where name = '张无忌');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_5-表子查询"><a href="#_5-表子查询" class="header-anchor">#</a> 5.表子查询</h3> <p>子查询返回的结果是多行多列，这种子查询称为表子查询。
+常用的操作符：IN</p> <p>案例:</p> <p>A. 查询与 &quot;鹿杖客&quot; , &quot;宋远桥&quot; 的职位和薪资相同的员工信息</p> <p>分解为两步执行:</p> <p>①. 查询 &quot;鹿杖客&quot; , &quot;宋远桥&quot; 的职位和薪资</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> select job, salary from emp where name = '鹿杖客' or name = '宋远桥';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>②. 查询与 &quot;鹿杖客&quot; , &quot;宋远桥&quot; 的职位和薪资相同的员工信息</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select * from emp where (job,salary) in ( select job, salary from emp where name =
+'鹿杖客' or name = '宋远桥' );
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>B. 查询入职日期是 &quot;2006-01-01&quot; 之后的员工信息 , 及其部门信息</p> <p>分解为两步执行:</p> <p>①. 入职日期是 &quot;2006-01-01&quot; 之后的员工信息</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> select * from emp where entrydate &gt; '2006-01-01';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>②. 查询这部分员工, 对应的部门信息;</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select e.*, d.* from (select * from emp where entrydate &gt; '2006-01-01') e left
+join dept d on e.dept_id = d.id ;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_7、多表查询案例"><a href="#_7、多表查询案例" class="header-anchor">#</a> 7、多表查询案例</h2> <p>数据环境准备:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>create table salgrade(
+grade int,
+losal int,
+hisal int
+) comment '薪资等级表';
+insert into salgrade values (1,0,3000);
+insert into salgrade values (2,3001,5000);
+insert into salgrade values (3,5001,8000);
+insert into salgrade values (4,8001,10000);
+insert into salgrade values (5,10001,15000);
+insert into salgrade values (6,15001,20000);
+insert into salgrade values (7,20001,25000);
+insert into salgrade values (8,25001,30000);
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>在这个案例中，我们主要运用上面所讲解的多表查询的语法，完成以下的12个需求即可，而这里主要涉
+及到的表就三张：emp员工表、dept部门表、salgrade薪资等级表 。</p> <p>1). 查询员工的姓名、年龄、职位、部门信息 （隐式内连接）</p> <p>表: emp , dept</p> <p>连接条件: emp.dept_id = dept.id</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select e.name , e.age , e.job , d.name from emp e , dept d where e.dept_id = d.id;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>2). 查询年龄小于30岁的员工的姓名、年龄、职位、部门信息（显式内连接）</p> <p>表: emp , dept</p> <p>连接条件: emp.dept_id = dept.id</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select e.name , e.age , e.job , d.name from emp e inner join dept d on e.dept_id =
+d.id where e.age &lt; 30;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>3). 查询拥有员工的部门ID、部门名称</p> <p>表: emp , dept</p> <p>连接条件: emp.dept_id = dept.id</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> select distinct d.id , d.name from emp e , dept d where e.dept_id = d.id;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>4). 查询所有年龄大于40岁的员工, 及其归属的部门名称; 如果员工没有分配部门, 也需要展示出来(外连接)</p> <p>表: emp , dept</p> <p>连接条件: emp.dept_id = dept.id</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select e.*, d.name from emp e left join dept d on e.dept_id = d.id where e.age &gt;40 ;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>5). 查询所有员工的工资等级</p> <p>表: emp , salgrade</p> <p>连接条件 : emp.salary &gt;= salgrade.losal and emp.salary &lt;= salgrade.hisal</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>-- 方式一
+select e.* , s.grade , s.losal, s.hisal from emp e , salgrade s where e.salary &gt;=
+s.losal and e.salary &lt;= s.hisal;
+-- 方式二
+select e.* , s.grade , s.losal, s.hisal from emp e , salgrade s where e.salary
+between s.losal and s.hisal;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>6). 查询 &quot;研发部&quot; 所有员工的信息及 工资等级</p> <p>表: emp , salgrade , dept</p> <p>连接条件 : emp.salary between salgrade.losal and salgrade.hisal ,emp.dept_id = dept.id</p> <p>查询条件 : dept.name = '研发部'</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select e.* , s.grade from emp e , dept d , salgrade s where e.dept_id = d.id and (
+e.salary between s.losal and s.hisal ) and d.name = '研发部';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>7). 查询 &quot;研发部&quot; 员工的平均工资</p> <p>表: emp , dept</p> <p>连接条件 : emp.dept_id = dept.id</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select avg(e.salary) from emp e, dept d where e.dept_id = d.id and d.name = '研发部';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>8). 查询工资比 &quot;灭绝&quot; 高的员工信息。</p> <p>①. 查询 &quot;灭绝&quot; 的薪资</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select salary from emp where name = '灭绝';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>②. 查询比她工资高的员工数据</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select * from emp where salary &gt; ( select salary from emp where name = '灭绝' );
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>9). 查询比平均薪资高的员工信息</p> <p>①. 查询员工的平均薪资</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select avg(salary) from emp;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>②. 查询比平均薪资高的员工信息</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select * from emp where salary &gt; ( select avg(salary) from emp );
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>10). 查询低于本部门平均工资的员工信息</p> <p>①. 查询指定部门平均薪资</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select avg(e1.salary) from emp e1 where e1.dept_id = 1;
+select avg(e1.salary) from emp e1 where e1.dept_id = 2;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>②. 查询低于本部门平均工资的员工信息</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select * from emp e2 where e2.salary &lt; ( select avg(e1.salary) from emp e1 where
+e1.dept_id = e2.dept_id );
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>11). 查询所有的部门信息, 并统计部门的员工人数</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select d.id, d.name , ( select count(*) from emp e where e.dept_id = d.id ) '人数'
+from dept d;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>12). 查询所有学生的选课情况, 展示出学生名称, 学号, 课程名称</p> <p>表: student , course , student_course</p> <p>连接条件: student.id = student_course.studentid , course.id =student_course.courseid</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select s.name , s.no , c.name from student s , student_course sc , course c where
+s.id = sc.studentid and sc.courseid = c.id ;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----> <div class="comments-wrapper" data-v-4698c43e><!----></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div><!----><div></div><!----></div></div>
+    <script src="/assets/js/app.368f64c4.js" defer></script><script src="/assets/js/20.a07337f3.js" defer></script><script src="/assets/js/1.140bedef.js" defer></script><script src="/assets/js/42.190b3589.js" defer></script><script src="/assets/js/44.82d112be.js" defer></script>
+  </body>
+</html>

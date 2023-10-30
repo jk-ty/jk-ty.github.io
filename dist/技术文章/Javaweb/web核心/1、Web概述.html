@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTTP&amp;Tomcat&amp;Servlet | 我的学习分享</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <script charset="utf-8" src="/js/custom.js"></script>
+    <meta name="description" content="己不由心，身又岂能由己。">
+    <meta name="keywords" content="Broad Tao,vuepress,自建博客,Broad Tao">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="robots" content="all">
+    <meta name="author" content="Broad Tao">
+    
+    <link rel="preload" href="/assets/css/0.styles.13129a82.css" as="style"><link rel="preload" href="/assets/js/app.368f64c4.js" as="script"><link rel="preload" href="/assets/js/20.a07337f3.js" as="script"><link rel="preload" href="/assets/js/1.140bedef.js" as="script"><link rel="preload" href="/assets/js/35.c6d8ee42.js" as="script"><link rel="preload" href="/assets/js/44.82d112be.js" as="script"><link rel="prefetch" href="/assets/js/10.84a4bc76.js"><link rel="prefetch" href="/assets/js/11.74304a50.js"><link rel="prefetch" href="/assets/js/12.e5fdb1f3.js"><link rel="prefetch" href="/assets/js/13.7c977e56.js"><link rel="prefetch" href="/assets/js/14.9c9c6116.js"><link rel="prefetch" href="/assets/js/15.69860740.js"><link rel="prefetch" href="/assets/js/16.878c604a.js"><link rel="prefetch" href="/assets/js/17.f8be178b.js"><link rel="prefetch" href="/assets/js/18.8d2c943c.js"><link rel="prefetch" href="/assets/js/19.a3a4cb45.js"><link rel="prefetch" href="/assets/js/21.e1d85675.js"><link rel="prefetch" href="/assets/js/22.f950f59e.js"><link rel="prefetch" href="/assets/js/23.016eff4b.js"><link rel="prefetch" href="/assets/js/24.c274e618.js"><link rel="prefetch" href="/assets/js/25.1577a4bb.js"><link rel="prefetch" href="/assets/js/26.49375a6d.js"><link rel="prefetch" href="/assets/js/27.4ab97d60.js"><link rel="prefetch" href="/assets/js/28.c6e2060c.js"><link rel="prefetch" href="/assets/js/29.3f589d75.js"><link rel="prefetch" href="/assets/js/30.c91d0847.js"><link rel="prefetch" href="/assets/js/31.831f8840.js"><link rel="prefetch" href="/assets/js/32.e636b7e5.js"><link rel="prefetch" href="/assets/js/33.fccc87bd.js"><link rel="prefetch" href="/assets/js/34.a5aa89dc.js"><link rel="prefetch" href="/assets/js/36.29ada5a4.js"><link rel="prefetch" href="/assets/js/37.1076c222.js"><link rel="prefetch" href="/assets/js/38.0f14ec92.js"><link rel="prefetch" href="/assets/js/39.aa21d927.js"><link rel="prefetch" href="/assets/js/4.ef239fdc.js"><link rel="prefetch" href="/assets/js/40.25a83a4c.js"><link rel="prefetch" href="/assets/js/41.442cf9f8.js"><link rel="prefetch" href="/assets/js/42.190b3589.js"><link rel="prefetch" href="/assets/js/43.9d225e14.js"><link rel="prefetch" href="/assets/js/45.827d8704.js"><link rel="prefetch" href="/assets/js/46.fbf978bb.js"><link rel="prefetch" href="/assets/js/47.54b48594.js"><link rel="prefetch" href="/assets/js/48.5630b271.js"><link rel="prefetch" href="/assets/js/49.5c8cc701.js"><link rel="prefetch" href="/assets/js/5.567c18a5.js"><link rel="prefetch" href="/assets/js/50.a6e5dd21.js"><link rel="prefetch" href="/assets/js/51.c2ca8fc9.js"><link rel="prefetch" href="/assets/js/52.553b32c3.js"><link rel="prefetch" href="/assets/js/53.1345a25a.js"><link rel="prefetch" href="/assets/js/54.7d45901e.js"><link rel="prefetch" href="/assets/js/55.e642e2ff.js"><link rel="prefetch" href="/assets/js/56.91833c5a.js"><link rel="prefetch" href="/assets/js/57.39615577.js"><link rel="prefetch" href="/assets/js/58.4c444ea9.js"><link rel="prefetch" href="/assets/js/59.8e98294e.js"><link rel="prefetch" href="/assets/js/6.2939a692.js"><link rel="prefetch" href="/assets/js/60.749a855b.js"><link rel="prefetch" href="/assets/js/61.ce1190f8.js"><link rel="prefetch" href="/assets/js/62.afb3823d.js"><link rel="prefetch" href="/assets/js/63.299fb01e.js"><link rel="prefetch" href="/assets/js/64.81fbdf0b.js"><link rel="prefetch" href="/assets/js/65.c90ffa1c.js"><link rel="prefetch" href="/assets/js/66.e3ce52be.js"><link rel="prefetch" href="/assets/js/67.a9b2ef30.js"><link rel="prefetch" href="/assets/js/68.f180eddd.js"><link rel="prefetch" href="/assets/js/69.c8d6122a.js"><link rel="prefetch" href="/assets/js/7.71815629.js"><link rel="prefetch" href="/assets/js/70.b935c49c.js"><link rel="prefetch" href="/assets/js/71.99cdd17c.js"><link rel="prefetch" href="/assets/js/72.580621cf.js"><link rel="prefetch" href="/assets/js/73.bc0dc747.js"><link rel="prefetch" href="/assets/js/74.da73099e.js"><link rel="prefetch" href="/assets/js/75.aeb7cdd0.js"><link rel="prefetch" href="/assets/js/76.f4f90de8.js"><link rel="prefetch" href="/assets/js/8.73301c16.js"><link rel="prefetch" href="/assets/js/9.2d4d0c4d.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.914d6aa8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.13129a82.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-4698c43e><div data-v-4698c43e><div id="loader-wrapper" class="loading-wrapper" data-v-1c4f0192 data-v-4698c43e data-v-4698c43e><div class="loader-main" data-v-1c4f0192><div data-v-1c4f0192></div><div data-v-1c4f0192></div><div data-v-1c4f0192></div><div data-v-1c4f0192></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-6cbeab0a data-v-4698c43e data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>我的学习分享</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>Broad Tao</span>
+            
+          <span data-v-6cbeab0a>2022 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-4698c43e><header class="navbar" data-v-4698c43e><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">我的学习分享</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/技术文章/项目/本网站的搭建服务器端.html" class="nav-link"><i class="iconfont reco-eye"></i>
+  项目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-faq"></i>
+      框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>spring</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring01/Spring_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-01
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring02/Spring_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-02
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring03/Spring_day03.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring AOP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-01/SpringMVC_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SpringMVC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-02/SpringMVC_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SSM整合
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Springboot/Springboot.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Springboot
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      JAVA
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/java/javase.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JavaSE
+</a></li></ul></li><li class="dropdown-item"><h4>JAVA WEB</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/javaweb/mysql/1、mysql安装.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MySQL
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JDBC/JDBC.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JDBC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Maven/Maven.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Maven
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/MyBatis/MyBatis1.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MyBatis
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/web核心/1、Web概述.html" class="nav-link"><i class="iconfont undefined"></i>
+  --HTTP&amp;Tomcat&amp;Servlet
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Request&amp;Response/Request&amp;Response.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Request&amp;Response
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JSP/JSP.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JSP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/会话技术/会话技术.html" class="nav-link"><i class="iconfont undefined"></i>
+  --会话技术
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Filter&amp;Listener&amp;Ajax/Filter&amp;Listener&amp;Ajax.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Filter&amp;Listener&amp;Ajax
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/VUE&amp;Element/VUE&amp;Element.html" class="nav-link"><i class="iconfont undefined"></i>
+  --VUE&amp;Element
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/综合案例/综合案例.html" class="nav-link"><i class="iconfont undefined"></i>
+  --综合案例
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/前端/html/html.html" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/css/2022-07-05-CSS.html" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/JavaScript/JavaScript.html" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      Python
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/python/python基础.html" class="nav-link"><i class="iconfont undefined"></i>
+  python基础
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/python/python爬虫.html" class="nav-link"><i class="iconfont undefined"></i>
+  python爬虫
+</a></li></ul></div></div><div class="nav-item"><a href="/技术文章/生活分享/分享.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  生活分享
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-4698c43e></div> <aside class="sidebar" data-v-4698c43e><div class="personal-info-wrapper" data-v-6c8ffc9c><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-6c8ffc9c> <h3 class="name" data-v-6c8ffc9c>
+    Broad Tao
+  </h3> <div class="num" data-v-6c8ffc9c><div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>25</h3> <h6 data-v-6c8ffc9c>文章</h6></div> <div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>31</h3> <h6 data-v-6c8ffc9c>标签</h6></div></div> <hr data-v-6c8ffc9c></div> <nav class="nav-links"><div class="nav-item"><a href="/技术文章/项目/本网站的搭建服务器端.html" class="nav-link"><i class="iconfont reco-eye"></i>
+  项目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-faq"></i>
+      框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>spring</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring01/Spring_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-01
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring02/Spring_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-02
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring03/Spring_day03.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring AOP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-01/SpringMVC_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SpringMVC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-02/SpringMVC_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SSM整合
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Springboot/Springboot.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Springboot
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      JAVA
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/java/javase.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JavaSE
+</a></li></ul></li><li class="dropdown-item"><h4>JAVA WEB</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/javaweb/mysql/1、mysql安装.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MySQL
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JDBC/JDBC.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JDBC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Maven/Maven.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Maven
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/MyBatis/MyBatis1.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MyBatis
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/web核心/1、Web概述.html" class="nav-link"><i class="iconfont undefined"></i>
+  --HTTP&amp;Tomcat&amp;Servlet
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Request&amp;Response/Request&amp;Response.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Request&amp;Response
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JSP/JSP.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JSP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/会话技术/会话技术.html" class="nav-link"><i class="iconfont undefined"></i>
+  --会话技术
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Filter&amp;Listener&amp;Ajax/Filter&amp;Listener&amp;Ajax.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Filter&amp;Listener&amp;Ajax
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/VUE&amp;Element/VUE&amp;Element.html" class="nav-link"><i class="iconfont undefined"></i>
+  --VUE&amp;Element
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/综合案例/综合案例.html" class="nav-link"><i class="iconfont undefined"></i>
+  --综合案例
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/前端/html/html.html" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/css/2022-07-05-CSS.html" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/JavaScript/JavaScript.html" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      Python
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/python/python基础.html" class="nav-link"><i class="iconfont undefined"></i>
+  python基础
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/python/python爬虫.html" class="nav-link"><i class="iconfont undefined"></i>
+  python爬虫
+</a></li></ul></div></div><div class="nav-item"><a href="/技术文章/生活分享/分享.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  生活分享
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>web核心</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/技术文章/Javaweb/web核心/1、Web概述.html" class="active sidebar-link">HTTP&amp;Tomcat&amp;Servlet</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/技术文章/Javaweb/web核心/1、Web概述.html#_1-1-web和javaweb的概念" class="sidebar-link">1.1 Web和JavaWeb的概念</a></li><li class="sidebar-sub-header"><a href="/技术文章/Javaweb/web核心/1、Web概述.html#_1-2-javaweb技术栈" class="sidebar-link">1.2 JavaWeb技术栈</a></li><li class="sidebar-sub-header"><a href="/技术文章/Javaweb/web核心/1、Web概述.html#_1-3-web核心" class="sidebar-link">1.3 Web核心</a></li></ul></li><li><a href="/技术文章/Javaweb/web核心/2、 HTTP.html" class="sidebar-link">2、 HTTP</a></li><li><a href="/技术文章/Javaweb/web核心/3、 Tomcat.html" class="sidebar-link">3、Tomcat</a></li><li><a href="/技术文章/Javaweb/web核心/4、 Servlet.html" class="sidebar-link">4， Servlet</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-6cbeab0a data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>HTTP&amp;Tomcat&amp;Servlet</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>Broad Tao</span>
+            
+          <span data-v-6cbeab0a>2022 - </span>
+          2023
+        </a></span></div></div> <div data-v-4698c43e><main class="page"><!----> <div class="page-title" style="display:none;"><h1>HTTP&amp;Tomcat&amp;Servlet</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>Broad Tao</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2022-11-24 13:47:03</span></i> <!----> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      HTTP
+    </span><span class="tag-item" data-v-484a899e>
+      Tomcat
+    </span><span class="tag-item" data-v-484a899e>
+      Servlet
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="_1-web概述"><a href="#_1-web概述" class="header-anchor">#</a> 1，Web概述</h1> <h2 id="_1-1-web和javaweb的概念"><a href="#_1-1-web和javaweb的概念" class="header-anchor">#</a> 1.1 Web和JavaWeb的概念</h2> <p>==Web是全球广域网，也称为万维网(www)，能够通过浏览器访问的网站。==
+在我们日常的生活中，经常会使用浏览器去访问<code>百度</code>、<code>京东</code>、<code>传智官网</code>等这些网站，这些网站统称为Web网站。如下就是通过浏览器访问传智官网的界面:
+<img src="/assets/img/1627031023395.d0a4b772.png" alt="1627031023395">
+顾名思义==JavaWeb就是用Java技术来解决相关web互联网领域的技术栈。==</p> <h2 id="_1-2-javaweb技术栈"><a href="#_1-2-javaweb技术栈" class="header-anchor">#</a> 1.2 JavaWeb技术栈</h2> <h4 id="_1-2-1-b-s架构"><a href="#_1-2-1-b-s架构" class="header-anchor">#</a> 1.2.1 B/S架构</h4> <p>什么是B/S架构?
+B/S 架构：Browser/Server，浏览器/服务器 架构模式，它的特点是，客户端只需要浏览器，应用程序的逻辑和数据都存储在服务器端。浏览器只需要请求服务器，获取Web资源，服务器把Web资源发送给浏览器即可。大家可以通过下面这张图来回想下我们平常的上网过程:
+<img src="/assets/img/1627031933553.cb054cc1.png" alt="1627031933553"></p> <ul><li>打开浏览器访问百度首页，输入要搜索的内容，点击回车或百度一下，就可以获取和搜索相关的内容</li> <li>思考下搜索的内容并不在我们自己的点上，那么这些内容从何而来？答案很明显是从百度服务器返回给我们的</li> <li>日常百度的小细节，逢年过节百度的logo会更换不同的图片，服务端发生变化，客户端不需做任务事情就能获取最新内容</li> <li>所以说B/S架构的好处:易于维护升级：服务器端升级后，客户端无需任何部署就可以使用到新的版本。
+了解了什么是B/S架构后，作为后台开发工程师的我们将来主要关注的是服务端的开发和维护工作。</li></ul> <h4 id="_1-2-2-静态资源"><a href="#_1-2-2-静态资源" class="header-anchor">#</a> 1.2.2 静态资源</h4> <ul><li>静态资源主要包含HTML、CSS、JavaScript、图片等，主要负责页面的展示。</li> <li>HTML+CSS+JavaScript,使用这些技术我们就可以制作出效果比较丰富的网页，将来展现给用户。但是由于做出来的这些内容都是静态的，这就会导致所有的人看到的内容将是一模一样。</li> <li>在日常上网的过程中，我们除了看到这些好看的页面以外，还会碰到很多动态内容，比如我们常见的百度登录效果:
+<img src="/assets/img/1627037814180.3270aa18.png" alt="1627037814180"> <code>张三</code>登录以后在网页的右上角看到的是 <code>张三</code>，而<code>李四</code>登录以后看到的则是<code>李四</code>。所以不同的用户访问相同的资源看到的内容大多数是不一样的，要想实现这样的效果，光靠静态资源是无法实现的。</li></ul> <h4 id="_1-2-3-动态资源"><a href="#_1-2-3-动态资源" class="header-anchor">#</a> 1.2.3 动态资源</h4> <ul><li>动态资源主要包含Servlet、JSP等，主要用来负责逻辑处理。</li> <li>动态资源处理完逻辑后会把得到的结果交给静态资源来进行展示，动态资源和静态资源要结合一起使用。</li> <li>动态资源虽然可以处理逻辑，但是当用户来登录百度的时候，就需要输入<code>用户名</code>和<code>密码</code>,这个时候我们就又需要解决的一个问题是，用户在注册的时候填入的用户名和密码、以及我们经常会访问到一些数据列表的内容展示(如下图所示)，这些数据都存储在哪里?我们需要的时候又是从哪里来取呢?
+<img src="/assets/img/1627038674340.a79adf1a.png" alt="1627038674340"></li></ul> <h4 id="_1-2-4-数据库"><a href="#_1-2-4-数据库" class="header-anchor">#</a> 1.2.4 数据库</h4> <ul><li>数据库主要负责存储数据。</li> <li>整个Web的访问过程就如下图所示:
+<img src="/assets/img/1627039320220.bf161a0b.png" alt="1627039320220">
+(1)浏览器发送一个请求到服务端，去请求所需要的相关资源;
+(2)资源分为动态资源和静态资源,动态资源可以是使用Java代码按照Servlet和JSP的规范编写的内容;
+(3)在Java代码可以进行业务处理也可以从数据库中读取数据;
+(4)拿到数据后，把数据交给HTML页面进行展示,再结合CSS和JavaScript使展示效果更好;
+(5)服务端将静态资源响应给浏览器;
+(6)浏览器将这些资源进行解析;
+(7)解析后将效果展示在浏览器，用户就可以看到最终的结果。</li></ul> <h4 id="_1-2-5-http协议"><a href="#_1-2-5-http协议" class="header-anchor">#</a> 1.2.5 HTTP协议</h4> <ul><li>HTTP协议:主要定义通信规则</li> <li>浏览器发送请求给服务器，服务器响应数据给浏览器，这整个过程都需要遵守一定的规则，之前大家学习过TCP、UDP，这些都属于规则，这里我们需要使用的是HTTP协议，这也是一种规则。</li></ul> <h4 id="_1-2-6-web服务器"><a href="#_1-2-6-web服务器" class="header-anchor">#</a> 1.2.6 Web服务器</h4> <ul><li>Web服务器:负责解析 HTTP 协议，解析请求数据，并发送响应数据</li> <li>浏览器按照HTTP协议发送请求和数据，后台就需要一个Web服务器软件来根据HTTP协议解析请求和数据，然后把处理结果再按照HTTP协议发送给浏览器</li> <li>Web服务器软件有很多，我们课程中将学习的是目前最为常用的==Tomcat==服务器</li></ul> <p>到这为止，关于JavaWeb中用到的技术栈我们就介绍完了，这里面就只有HTTP协议、Servlet、JSP以及Tomcat这些知识是没有学习过的，所以整个Web核心主要就是来学习这些技术。</p> <h2 id="_1-3-web核心"><a href="#_1-3-web核心" class="header-anchor">#</a> 1.3 Web核心</h2> <p><img src="/assets/img/1627043194238.ddd6464b.png" alt="1627043194238"></p> <p>(1)Request是从客户端向服务端发出的请求对象，</p> <p>(2)Response是从服务端响应给客户端的结果对象，</p> <p>(3)JSP是动态网页技术,</p> <p>(4)会话技术是用来存储客户端和服务端交互所产生的数据，</p> <p>(5)过滤器是用来拦截客户端的请求,</p> <p>(6)监听器是用来监听特定事件,</p> <p>(7)Ajax、Vue、ElementUI都是属于前端技术</p> <p>这些技术都该如何来使用，我们后面会一个个进行详细的讲解。接下来我们来学习下HTTP、Tomcat和Servlet。</p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----> <div class="comments-wrapper" data-v-4698c43e><!----></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div><!----><div></div><!----></div></div>
+    <script src="/assets/js/app.368f64c4.js" defer></script><script src="/assets/js/20.a07337f3.js" defer></script><script src="/assets/js/1.140bedef.js" defer></script><script src="/assets/js/35.c6d8ee42.js" defer></script><script src="/assets/js/44.82d112be.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>02-Linux常用命令 | 我的学习分享</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <script charset="utf-8" src="/js/custom.js"></script>
+    <meta name="description" content="己不由心，身又岂能由己。">
+    <meta name="keywords" content="Broad Tao,vuepress,自建博客,Broad Tao">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="robots" content="all">
+    <meta name="author" content="Broad Tao">
+    
+    <link rel="preload" href="/assets/css/0.styles.13129a82.css" as="style"><link rel="preload" href="/assets/js/app.368f64c4.js" as="script"><link rel="preload" href="/assets/js/20.a07337f3.js" as="script"><link rel="preload" href="/assets/js/1.140bedef.js" as="script"><link rel="preload" href="/assets/js/49.5c8cc701.js" as="script"><link rel="preload" href="/assets/js/44.82d112be.js" as="script"><link rel="prefetch" href="/assets/js/10.84a4bc76.js"><link rel="prefetch" href="/assets/js/11.74304a50.js"><link rel="prefetch" href="/assets/js/12.e5fdb1f3.js"><link rel="prefetch" href="/assets/js/13.7c977e56.js"><link rel="prefetch" href="/assets/js/14.9c9c6116.js"><link rel="prefetch" href="/assets/js/15.69860740.js"><link rel="prefetch" href="/assets/js/16.878c604a.js"><link rel="prefetch" href="/assets/js/17.f8be178b.js"><link rel="prefetch" href="/assets/js/18.8d2c943c.js"><link rel="prefetch" href="/assets/js/19.a3a4cb45.js"><link rel="prefetch" href="/assets/js/21.e1d85675.js"><link rel="prefetch" href="/assets/js/22.f950f59e.js"><link rel="prefetch" href="/assets/js/23.016eff4b.js"><link rel="prefetch" href="/assets/js/24.c274e618.js"><link rel="prefetch" href="/assets/js/25.1577a4bb.js"><link rel="prefetch" href="/assets/js/26.49375a6d.js"><link rel="prefetch" href="/assets/js/27.4ab97d60.js"><link rel="prefetch" href="/assets/js/28.c6e2060c.js"><link rel="prefetch" href="/assets/js/29.3f589d75.js"><link rel="prefetch" href="/assets/js/30.c91d0847.js"><link rel="prefetch" href="/assets/js/31.831f8840.js"><link rel="prefetch" href="/assets/js/32.e636b7e5.js"><link rel="prefetch" href="/assets/js/33.fccc87bd.js"><link rel="prefetch" href="/assets/js/34.a5aa89dc.js"><link rel="prefetch" href="/assets/js/35.c6d8ee42.js"><link rel="prefetch" href="/assets/js/36.29ada5a4.js"><link rel="prefetch" href="/assets/js/37.1076c222.js"><link rel="prefetch" href="/assets/js/38.0f14ec92.js"><link rel="prefetch" href="/assets/js/39.aa21d927.js"><link rel="prefetch" href="/assets/js/4.ef239fdc.js"><link rel="prefetch" href="/assets/js/40.25a83a4c.js"><link rel="prefetch" href="/assets/js/41.442cf9f8.js"><link rel="prefetch" href="/assets/js/42.190b3589.js"><link rel="prefetch" href="/assets/js/43.9d225e14.js"><link rel="prefetch" href="/assets/js/45.827d8704.js"><link rel="prefetch" href="/assets/js/46.fbf978bb.js"><link rel="prefetch" href="/assets/js/47.54b48594.js"><link rel="prefetch" href="/assets/js/48.5630b271.js"><link rel="prefetch" href="/assets/js/5.567c18a5.js"><link rel="prefetch" href="/assets/js/50.a6e5dd21.js"><link rel="prefetch" href="/assets/js/51.c2ca8fc9.js"><link rel="prefetch" href="/assets/js/52.553b32c3.js"><link rel="prefetch" href="/assets/js/53.1345a25a.js"><link rel="prefetch" href="/assets/js/54.7d45901e.js"><link rel="prefetch" href="/assets/js/55.e642e2ff.js"><link rel="prefetch" href="/assets/js/56.91833c5a.js"><link rel="prefetch" href="/assets/js/57.39615577.js"><link rel="prefetch" href="/assets/js/58.4c444ea9.js"><link rel="prefetch" href="/assets/js/59.8e98294e.js"><link rel="prefetch" href="/assets/js/6.2939a692.js"><link rel="prefetch" href="/assets/js/60.749a855b.js"><link rel="prefetch" href="/assets/js/61.ce1190f8.js"><link rel="prefetch" href="/assets/js/62.afb3823d.js"><link rel="prefetch" href="/assets/js/63.299fb01e.js"><link rel="prefetch" href="/assets/js/64.81fbdf0b.js"><link rel="prefetch" href="/assets/js/65.c90ffa1c.js"><link rel="prefetch" href="/assets/js/66.e3ce52be.js"><link rel="prefetch" href="/assets/js/67.a9b2ef30.js"><link rel="prefetch" href="/assets/js/68.f180eddd.js"><link rel="prefetch" href="/assets/js/69.c8d6122a.js"><link rel="prefetch" href="/assets/js/7.71815629.js"><link rel="prefetch" href="/assets/js/70.b935c49c.js"><link rel="prefetch" href="/assets/js/71.99cdd17c.js"><link rel="prefetch" href="/assets/js/72.580621cf.js"><link rel="prefetch" href="/assets/js/73.bc0dc747.js"><link rel="prefetch" href="/assets/js/74.da73099e.js"><link rel="prefetch" href="/assets/js/75.aeb7cdd0.js"><link rel="prefetch" href="/assets/js/76.f4f90de8.js"><link rel="prefetch" href="/assets/js/8.73301c16.js"><link rel="prefetch" href="/assets/js/9.2d4d0c4d.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.914d6aa8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.13129a82.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-4698c43e><div data-v-4698c43e><div id="loader-wrapper" class="loading-wrapper" data-v-1c4f0192 data-v-4698c43e data-v-4698c43e><div class="loader-main" data-v-1c4f0192><div data-v-1c4f0192></div><div data-v-1c4f0192></div><div data-v-1c4f0192></div><div data-v-1c4f0192></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-6cbeab0a data-v-4698c43e data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>我的学习分享</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>Broad Tao</span>
+            
+          <span data-v-6cbeab0a>2022 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-4698c43e><header class="navbar" data-v-4698c43e><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">我的学习分享</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/技术文章/项目/本网站的搭建服务器端.html" class="nav-link"><i class="iconfont reco-eye"></i>
+  项目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-faq"></i>
+      框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>spring</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring01/Spring_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-01
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring02/Spring_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-02
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring03/Spring_day03.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring AOP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-01/SpringMVC_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SpringMVC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-02/SpringMVC_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SSM整合
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Springboot/Springboot.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Springboot
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      JAVA
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/java/javase.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JavaSE
+</a></li></ul></li><li class="dropdown-item"><h4>JAVA WEB</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/javaweb/mysql/1、mysql安装.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MySQL
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JDBC/JDBC.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JDBC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Maven/Maven.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Maven
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/MyBatis/MyBatis1.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MyBatis
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/web核心/1、Web概述.html" class="nav-link"><i class="iconfont undefined"></i>
+  --HTTP&amp;Tomcat&amp;Servlet
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Request&amp;Response/Request&amp;Response.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Request&amp;Response
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JSP/JSP.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JSP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/会话技术/会话技术.html" class="nav-link"><i class="iconfont undefined"></i>
+  --会话技术
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Filter&amp;Listener&amp;Ajax/Filter&amp;Listener&amp;Ajax.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Filter&amp;Listener&amp;Ajax
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/VUE&amp;Element/VUE&amp;Element.html" class="nav-link"><i class="iconfont undefined"></i>
+  --VUE&amp;Element
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/综合案例/综合案例.html" class="nav-link"><i class="iconfont undefined"></i>
+  --综合案例
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/前端/html/html.html" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/css/2022-07-05-CSS.html" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/JavaScript/JavaScript.html" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      Python
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/python/python基础.html" class="nav-link"><i class="iconfont undefined"></i>
+  python基础
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/python/python爬虫.html" class="nav-link"><i class="iconfont undefined"></i>
+  python爬虫
+</a></li></ul></div></div><div class="nav-item"><a href="/技术文章/生活分享/分享.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  生活分享
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-4698c43e></div> <aside class="sidebar" data-v-4698c43e><div class="personal-info-wrapper" data-v-6c8ffc9c><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-6c8ffc9c> <h3 class="name" data-v-6c8ffc9c>
+    Broad Tao
+  </h3> <div class="num" data-v-6c8ffc9c><div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>25</h3> <h6 data-v-6c8ffc9c>文章</h6></div> <div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>31</h3> <h6 data-v-6c8ffc9c>标签</h6></div></div> <hr data-v-6c8ffc9c></div> <nav class="nav-links"><div class="nav-item"><a href="/技术文章/项目/本网站的搭建服务器端.html" class="nav-link"><i class="iconfont reco-eye"></i>
+  项目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-faq"></i>
+      框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>spring</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring01/Spring_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-01
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring02/Spring_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-02
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring03/Spring_day03.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring AOP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-01/SpringMVC_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SpringMVC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-02/SpringMVC_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SSM整合
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Springboot/Springboot.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Springboot
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      JAVA
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/java/javase.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JavaSE
+</a></li></ul></li><li class="dropdown-item"><h4>JAVA WEB</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/javaweb/mysql/1、mysql安装.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MySQL
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JDBC/JDBC.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JDBC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Maven/Maven.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Maven
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/MyBatis/MyBatis1.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MyBatis
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/web核心/1、Web概述.html" class="nav-link"><i class="iconfont undefined"></i>
+  --HTTP&amp;Tomcat&amp;Servlet
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Request&amp;Response/Request&amp;Response.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Request&amp;Response
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JSP/JSP.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JSP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/会话技术/会话技术.html" class="nav-link"><i class="iconfont undefined"></i>
+  --会话技术
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Filter&amp;Listener&amp;Ajax/Filter&amp;Listener&amp;Ajax.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Filter&amp;Listener&amp;Ajax
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/VUE&amp;Element/VUE&amp;Element.html" class="nav-link"><i class="iconfont undefined"></i>
+  --VUE&amp;Element
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/综合案例/综合案例.html" class="nav-link"><i class="iconfont undefined"></i>
+  --综合案例
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/前端/html/html.html" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/css/2022-07-05-CSS.html" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/JavaScript/JavaScript.html" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      Python
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/python/python基础.html" class="nav-link"><i class="iconfont undefined"></i>
+  python基础
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/python/python爬虫.html" class="nav-link"><i class="iconfont undefined"></i>
+  python爬虫
+</a></li></ul></div></div><div class="nav-item"><a href="/技术文章/生活分享/分享.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  生活分享
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>学习内容</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/技术文章/软件测试/学习内容/01-网络基础.html" class="sidebar-link">01-网络基础</a></li><li><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html" class="active sidebar-link">02-Linux常用命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#一、" class="sidebar-link">一、</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_1-查看文件信息-ls" class="sidebar-link">1.查看文件信息：ls</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_2-清屏-clear" class="sidebar-link">2.清屏：clear</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_3-切换工作目录-cd" class="sidebar-link">3.  切换工作目录： cd</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_4-显示当前路径-pwd" class="sidebar-link">4.   显示当前路径：pwd</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_5-创建目录-mkdir" class="sidebar-link">5.   创建目录：mkdir</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_6-删除文件-rm" class="sidebar-link">6.   删除文件：rm</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_7-拷贝-cp" class="sidebar-link">7.   拷贝：cp</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_8-mv-移动、重命名" class="sidebar-link">8.   mv：移动、重命名</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_9-创建文件-touch" class="sidebar-link">9.   创建文件: touch</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#二、" class="sidebar-link">二、</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_1-输出命令" class="sidebar-link">1.  输出命令：</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_2-分屏显示-more" class="sidebar-link">2.分屏显示：more</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_3-管道" class="sidebar-link">3.   管道：|</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_4-建立链接文件-ln" class="sidebar-link">4.   建立链接文件：ln</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_5-查看或者合并文件内容-cat" class="sidebar-link">5.   查看或者合并文件内容：cat</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_6-文本搜索-grep" class="sidebar-link">6.   文本搜索：grep</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_7-查找文件-find" class="sidebar-link">7.   查找文件：find</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_8-归档管理-tar" class="sidebar-link">8.   归档管理：tar</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_9-zip和unzip命令" class="sidebar-link">9.zip和unzip命令</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_10-权限指令" class="sidebar-link">10.权限指令</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#三、获取管理员权限" class="sidebar-link">三、获取管理员权限</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_1-sudo" class="sidebar-link">1.sudo</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_2-whoami" class="sidebar-link">2.whoami</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_3-exit" class="sidebar-link">3.exit</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_4-who" class="sidebar-link">4.who</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_5-passwd" class="sidebar-link">5.passwd</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_6-which" class="sidebar-link">6.which</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_7-关机和重启" class="sidebar-link">7.关机和重启</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#四、用户相关操作" class="sidebar-link">四、用户相关操作</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_1-创建用户" class="sidebar-link">1.创建用户</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_2-id查看" class="sidebar-link">2.id查看</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_3-设置密码" class="sidebar-link">3.设置密码</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_4-切换用户" class="sidebar-link">4.切换用户</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#小结" class="sidebar-link">小结</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#五、远程登录、远程拷贝" class="sidebar-link">五、远程登录、远程拷贝</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#远程登录、远程拷贝" class="sidebar-link">远程登录、远程拷贝</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#六、vim" class="sidebar-link">六、vim</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_1-安装" class="sidebar-link">1.安装:</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_2-命令" class="sidebar-link">2.命令</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#_3-其他常用命令" class="sidebar-link">3.其他常用命令</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#七、yum安装卸载" class="sidebar-link">七、Yum安装卸载</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#yum命令" class="sidebar-link">Yum命令</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html#八、其他指令" class="sidebar-link">八、其他指令</a></li></ul></li><li><a href="/技术文章/软件测试/学习内容/03-MySql.html" class="sidebar-link">03-MySql</a></li><li><a href="/技术文章/软件测试/学习内容/04-软件测试.html" class="sidebar-link">04-软件测试</a></li><li><a href="/技术文章/软件测试/学习内容/05-测试用例.html" class="sidebar-link">05-测试用例</a></li><li><a href="/技术文章/软件测试/学习内容/06-常见的网页控件.html" class="sidebar-link">06-常见的网页控件</a></li><li><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html" class="sidebar-link">07-软件测试整体框架</a></li><li><a href="/技术文章/软件测试/学习内容/商城测试点.html" class="sidebar-link">商城测试点</a></li><li><a href="/技术文章/软件测试/学习内容/背诵记忆.html" class="sidebar-link">背诵</a></li><li><a href="/技术文章/软件测试/学习内容/面试.html" class="sidebar-link">面试</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-6cbeab0a data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a></h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>Broad Tao</span>
+            
+          <span data-v-6cbeab0a>2022 - </span>
+          2023
+        </a></span></div></div> <div data-v-4698c43e><main class="page"><!----> <div class="page-title" style="display:none;"><h1>02-Linux常用命令</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>Broad Tao</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="_02-linux常用命令"><a href="#_02-linux常用命令" class="header-anchor">#</a> 02-Linux常用命令</h1> <h2 id="一、"><a href="#一、" class="header-anchor">#</a> 一、</h2> <h2 id="_1-查看文件信息-ls"><a href="#_1-查看文件信息-ls" class="header-anchor">#</a> 1.查看文件信息：ls</h2> <table><thead><tr><th>参数</th> <th>含义</th></tr></thead> <tbody><tr><td>-a</td> <td>显示指定目录下所有子目录与文件，包括隐藏文件</td></tr> <tr><td>-l</td> <td>以列表方式显示文件的详细信息</td></tr> <tr><td>-h</td> <td>配合 -l 以人性化的方式显示文件大小</td></tr></tbody></table> <h2 id="_2-清屏-clear"><a href="#_2-清屏-clear" class="header-anchor">#</a> 2.清屏：clear</h2> <p>clear作用为清除终端上的显示(类似于DOS的cls清屏功能)，也可使用快捷键：Ctrl + l ( “l” 为小写字母&quot;L&quot; )。</p> <h2 id="_3-切换工作目录-cd"><a href="#_3-切换工作目录-cd" class="header-anchor">#</a> 3.  切换工作目录： cd</h2> <table><thead><tr><th>命令</th> <th>含义</th></tr></thead> <tbody><tr><td>cd</td> <td>切换到当前用户的主目录(/home/用户目录)，用户登陆的时候，默认的目录就是用户的主目录。</td></tr> <tr><td>cd .</td> <td>切换到当前目录</td></tr> <tr><td>cd ..</td> <td>切换到上级目录</td></tr> <tr><td>cd ~</td> <td>切换到当前用户的主目录(/home/用户目录)</td></tr> <tr><td>cd -</td> <td>可进入上次所在的目录</td></tr></tbody></table> <h2 id="_4-显示当前路径-pwd"><a href="#_4-显示当前路径-pwd" class="header-anchor">#</a> 4.   显示当前路径：pwd</h2> <h2 id="_5-创建目录-mkdir"><a href="#_5-创建目录-mkdir" class="header-anchor">#</a> 5.   创建目录：mkdir</h2> <p>通过mkdir命令可以创建一个新的目录。参数-p可递归创建目录。</p> <h2 id="_6-删除文件-rm"><a href="#_6-删除文件-rm" class="header-anchor">#</a> 6.   删除文件：rm</h2> <table><thead><tr><th>参数</th> <th>含义</th></tr></thead> <tbody><tr><td>-f</td> <td>强制删除，忽略不存在的文件，无需提示</td></tr> <tr><td>-r</td> <td>递归地删除目录下的内容，删除文件夹时必须加此参数</td></tr> <tr><td>-i</td> <td>以进行交互式方式执行</td></tr></tbody></table> <h2 id="_7-拷贝-cp"><a href="#_7-拷贝-cp" class="header-anchor">#</a> 7.   拷贝：cp</h2> <table><thead><tr><th>参数</th> <th>含义</th></tr></thead> <tbody><tr><td>-a</td> <td>该选项通常在复制目录时使用，它保留链接、文件属性，并递归地复制目录，简单而言，保持文件原有属性</td></tr> <tr><td>-f</td> <td>覆盖已经存在的目标文件而不提示</td></tr> <tr><td>-i</td> <td>交互式复制，在覆盖目标文件之前将给出提示要求用户确认</td></tr> <tr><td>-r</td> <td>若给出的源文件是目录文件，则cp将递归复制该目录下的所有子目录和文件，目标文件必须为一个目录名</td></tr> <tr><td>-v</td> <td>显示拷贝进度</td></tr></tbody></table> <h2 id="_8-mv-移动、重命名"><a href="#_8-mv-移动、重命名" class="header-anchor">#</a> 8.   mv：移动、重命名</h2> <table><thead><tr><th>参数</th> <th>含义</th></tr></thead> <tbody><tr><td>-f</td> <td>禁止交互式操作， 如有覆盖也不会给出提示</td></tr> <tr><td>-i</td> <td>确认交互方式操作，如果mv操作将导致对已存在的目标文件的覆盖，系统会询问是否重写，要求用户回答以避免误覆盖文件</td></tr> <tr><td>-v</td> <td>显示移动进度</td></tr></tbody></table> <h2 id="_9-创建文件-touch"><a href="#_9-创建文件-touch" class="header-anchor">#</a> 9.   创建文件: touch</h2> <p>用户可以通过touch来创建一个空的文件</p> <h2 id="二、"><a href="#二、" class="header-anchor">#</a> 二、</h2> <h2 id="_1-输出命令"><a href="#_1-输出命令" class="header-anchor">#</a> 1.  输出命令：</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Linux允许将命令执行结果重定重定向命向到一个文件，本应显示在终端上的内容保存到指定文件中。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>注意： &gt;输出重定向会覆盖原来的内容，&gt;&gt;输出重定向则会追加到文件的尾部。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_2-分屏显示-more"><a href="#_2-分屏显示-more" class="header-anchor">#</a> 2.分屏显示：more</h2> <p>查看内容时，在信息过长无法在一屏上显示时，会出现快速滚屏，使得用户无法看清文件的内容，此时可以使用more命令，每次只显示一页，按下空格键可以显示下一页，按下q键退出显示，按下h键可以获取帮助。</p> <h2 id="_3-管道"><a href="#_3-管道" class="header-anchor">#</a> 3.   管道：|</h2> <p>管道：一个命令的输出可以通过管道做为另一个命令的输入。</p> <p>管道我们可以理解现实生活中的管子，管子的一头塞东西进去，另一头取出来，这里“ | ”的左右分为两端，左端塞东西(写)，右端取东西(读)。</p> <h2 id="_4-建立链接文件-ln"><a href="#_4-建立链接文件-ln" class="header-anchor">#</a> 4.   建立链接文件：ln</h2> <p>链接文件分为软链接和硬链接。</p> <p>软链接：软链接不占用磁盘空间，源文件删除则软链接失效。</p> <p>硬链接：硬链接只能链接普通文件，不能链接目录。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>硬链接    
+ln 源文件    链接文件  
+软链接    
+ln -s 源文件 链接文件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="_5-查看或者合并文件内容-cat"><a href="#_5-查看或者合并文件内容-cat" class="header-anchor">#</a> 5.   查看或者合并文件内容：cat</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>cat test1.txt test2.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_6-文本搜索-grep"><a href="#_6-文本搜索-grep" class="header-anchor">#</a> 6.   文本搜索：grep</h2> <p>Linux系统中grep命令是一种强大的文本搜索工具，grep允许对文本文件进行模式查找。如果找到匹配模式， grep打印包含模式的所有行。</p> <p>grep一般格式为：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>grep [-选项] ‘搜索内容串’文件名
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>在grep命令中输入字符串参数时，最好引号或双引号括起来。</p> <table><thead><tr><th>选项</th> <th>含义</th></tr></thead> <tbody><tr><td>-v</td> <td>显示不包含匹配文本的所有行（相当于求反）</td></tr> <tr><td>-n</td> <td>显示匹配行及行号</td></tr> <tr><td>-i</td> <td>忽略大小写</td></tr></tbody></table> <p>正则表达式</p> <table><thead><tr><th>正则表达式</th> <th>说明</th></tr></thead> <tbody><tr><td>^</td> <td>以指定字符串开头</td></tr> <tr><td>&amp;</td> <td>以指定字符串结尾</td></tr> <tr><td>.</td> <td>匹配一个非换行符的字符</td></tr></tbody></table> <p>grep常用正则表达式：</p> <table><thead><tr><th>参数</th> <th>含义</th></tr></thead> <tbody><tr><td>^a</td> <td>行首,搜寻以m 开头的行；grep-n '^a' 1.txt</td></tr> <tr><td>ke$</td> <td>行尾,搜寻以ke 结束的行；grep -n 'ke$' 1.txt</td></tr> <tr><td>[Ss]igna[Ll]</td> <td>匹配 [] 里中一系列字符中的一个；搜寻匹配单词signal、signaL、Signal、SignaL的行；grep -n '[Ss]igna[Ll]' 1.txt</td></tr> <tr><td>.</td> <td>(点)匹配一个非换行符的字符；匹配 e和 e之间有任意一个字符，可以匹配 eee，eae，eve，但是不匹配 ee，eaae；grep -n 'e.e' 1.txt</td></tr></tbody></table> <h2 id="_7-查找文件-find"><a href="#_7-查找文件-find" class="header-anchor">#</a> 7.   查找文件：find</h2> <p>通常用来在特定的目录下搜索符合条件的文件，也可以用来搜索特定用户属主的文件。</p> <p>格式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>find 查找路径 -name 文件名称
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>可使用通配符查找</p> <table><thead><tr><th>通配符</th> <th>说明</th></tr></thead> <tbody><tr><td>*</td> <td>代表0个或多个任意字符</td></tr> <tr><td>？</td> <td>代表任意一个字符</td></tr></tbody></table> <p>常用用法：</p> <table><thead><tr><th>命令</th> <th>含义</th></tr></thead> <tbody><tr><td>find . -name test.sh</td> <td>查找当前目录下所有名为test.sh的文件</td></tr> <tr><td>find . -name '.sh'</td> <td>查找当前目录下所有后缀为.sh的文件</td></tr></tbody></table> <h2 id="_8-归档管理-tar"><a href="#_8-归档管理-tar" class="header-anchor">#</a> 8.   归档管理：tar</h2> <p>tar使用格式 tar [参数] 打包文件名 文件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>打包
+tar cvf a.tar .txt
+
+解包
+tar xvf a.tar -C atar
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>tar命令很特殊，其参数前面可以使用“-”，也可以不使用。</p> <p>常用参数：</p> <table><thead><tr><th>参数</th> <th>含义</th></tr></thead> <tbody><tr><td>-c</td> <td>生成档案文件，创建打包文件</td></tr> <tr><td>-v</td> <td>列出归档解档的详细过程，显示进度</td></tr> <tr><td>-f</td> <td>指定档案文件名称</td></tr> <tr><td>-t</td> <td>列出档案中包含的文件</td></tr> <tr><td>-x</td> <td>解开档案文件</td></tr></tbody></table> <h2 id="_9-zip和unzip命令"><a href="#_9-zip和unzip命令" class="header-anchor">#</a> 9.zip和unzip命令</h2> <table><thead><tr><th>命令</th> <th>说明</th></tr></thead> <tbody><tr><td>zip</td> <td>压缩成.zip格式文件</td></tr> <tr><td>unzip</td> <td>解压缩.zip格式文件</td></tr></tbody></table> <p>选项</p> <table><thead><tr><th>选项</th> <th>说明</th></tr></thead> <tbody><tr><td>-r</td> <td>压缩目录及目录下所有文件</td></tr> <tr><td>-d</td> <td>解压缩到指定目录</td></tr></tbody></table> <p>压缩文件尽量使用.gz格式，因为占用空间较少
+使用zip命令压缩的文件占用空间比较多, 但比较通用，操作更加简单。</p> <h2 id="_10-权限指令"><a href="#_10-权限指令" class="header-anchor">#</a> 10.权限指令</h2> <p><img src="/assets/img/6.930f2e64.png" alt="6"></p> <h3 id="_1-数字法"><a href="#_1-数字法" class="header-anchor">#</a> 1.数字法</h3> <p>格式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>chmod 数字权限 文件名
+
+chmod -R 数字权限 文件名 //递归的对文件夹及里面的文件进行赋予权限
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><table><thead><tr><th>权限</th> <th>说明</th></tr></thead> <tbody><tr><td>r</td> <td>可读，权限值是4</td></tr> <tr><td>w</td> <td>可写，权限值是2</td></tr> <tr><td>x</td> <td>可执行，权限值是1</td></tr> <tr><td>-</td> <td>无任何权限，权限值是0</td></tr></tbody></table> <h3 id="_2-字母法"><a href="#_2-字母法" class="header-anchor">#</a> 2.字母法</h3> <table><thead><tr><th>角色</th> <th>说明</th></tr></thead> <tbody><tr><td>u</td> <td>user, 表示该文件的所有者</td></tr> <tr><td>g</td> <td>group, 表示用户组</td></tr> <tr><td>o</td> <td>other, 表示其他用户</td></tr> <tr><td>a</td> <td>all, 表示所有用户</td></tr></tbody></table> <table><thead><tr><th>操作符</th> <th>说明</th></tr></thead> <tbody><tr><td>+</td> <td>增加权限</td></tr> <tr><td>-</td> <td>撤销权限</td></tr> <tr><td>=</td> <td>设置权限</td></tr></tbody></table> <table><thead><tr><th>权限</th> <th>说明</th></tr></thead> <tbody><tr><td>r</td> <td>可读 read</td></tr> <tr><td>w</td> <td>可写 write</td></tr> <tr><td>x</td> <td>可执行</td></tr> <tr><td>-</td> <td>无任何权限</td></tr></tbody></table> <h4 id="使用格式"><a href="#使用格式" class="header-anchor">#</a> 使用格式</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>chmod 角色+操作符+权限符 文件名
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="三、获取管理员权限"><a href="#三、获取管理员权限" class="header-anchor">#</a> 三、获取管理员权限</h2> <h2 id="_1-sudo"><a href="#_1-sudo" class="header-anchor">#</a> 1.sudo</h2> <p>使用方法</p> <table><thead><tr><th>命令</th> <th>说明</th></tr></thead> <tbody><tr><td>sudo -s</td> <td>切换到root用户，获取管理员权限 (退出当前用户exit)</td></tr> <tr><td>sudo</td> <td>某个命令的执行需要获取管理员权限可以在执行命令前面加上sudo</td></tr></tbody></table> <p>如果只是某次操作需要使用管理员权限建议使用 sudo , 也就是说临时使用管理器权限。
+如果大量操作都需要使用管理员权限 sudo –s, 但是操作需谨慎。
+如果普通用户要调用sudo, 需要root给用户使用sudo的资格,需修改/etc/sudoers 文件并在最后一
+行写入
+xiaoming ALL=(ALL) ALL</p> <h2 id="_2-whoami"><a href="#_2-whoami" class="header-anchor">#</a> 2.whoami</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>whoami     //查看当前用户限
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_3-exit"><a href="#_3-exit" class="header-anchor">#</a> 3.exit</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>exit //退出登录用户
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>如果是切换后的登陆用户，退出则返回上一个登陆账号。
+如果是终端界面，退出当前终端。</p> <h2 id="_4-who"><a href="#_4-who" class="header-anchor">#</a> 4.who</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>who 查看所有的登录用户
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_5-passwd"><a href="#_5-passwd" class="header-anchor">#</a> 5.passwd</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>passwd 修改用户密码，不指定用户默认修改当前登录用户密码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_6-which"><a href="#_6-which" class="header-anchor">#</a> 6.which</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>which 查看命令位置
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_7-关机和重启"><a href="#_7-关机和重启" class="header-anchor">#</a> 7.关机和重启</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>shutdown –h now     立刻关机
+
+reboot 				重启
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>sudo 是临时获取管理员权限
+sudo -s 是切换到管理员用户，一直使用管理员权限，需要谨慎操作。
+exit 是退出当前用户
+passwd 默认修改当前用户密码</p> <h2 id="四、用户相关操作"><a href="#四、用户相关操作" class="header-anchor">#</a> 四、用户相关操作</h2> <h2 id="_1-创建用户"><a href="#_1-创建用户" class="header-anchor">#</a> 1.创建用户</h2> <table><thead><tr><th>命令</th> <th>说明</th></tr></thead> <tbody><tr><td>useradd</td> <td>创建(添加)用户</td></tr></tbody></table> <table><thead><tr><th>选项</th> <th>说明</th></tr></thead> <tbody><tr><td>-m</td> <td>自动创建用户主目录,主目录的名字就是用户名(用户家目录)</td></tr></tbody></table> <p>useradd 命令的使用需要使用管理员权限，前面需要加上 sudo
+创建用户如果不指定用户组，默认会自动创建一个同名的用户组
+查看用户是否创建成功，可以查看 /etc/passwd 这个文件
+查看用户组是否创建成功，可以查看 /etc/group 这个文件</p> <p>passwd文件中的每项信息说明,以root❌0:0:root:/root:/bin/bash为例:</p> <p>第一个：用户名
+第二个：密码占位符
+第三个：uid, 用户id
+第四个：gid, 用户所在组id
+第五个：用户描述, 可选，
+第六个：用户的主目录所在位置
+第七个：用户所用 shell 的类型，一般由bash或者sh，默认不设置是sh类型</p> <h2 id="_2-id查看"><a href="#_2-id查看" class="header-anchor">#</a> 2.id查看</h2> <table><thead><tr><th>命令</th> <th>说明</th></tr></thead> <tbody><tr><td>id</td> <td>查看用户信息</td></tr></tbody></table> <p>uid=1001(laowang) gid=1001(laowang) 组=1001(laowang)
+第一个: uid 表示用户id
+第二个: gid 表示用户组id
+第三个: 组 表示用户所在的用户组</p> <h2 id="_3-设置密码"><a href="#_3-设置密码" class="header-anchor">#</a> 3.设置密码</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>sudo passwd 用户名
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_4-切换用户"><a href="#_4-切换用户" class="header-anchor">#</a> 4.切换用户</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>su 切换用户
+格式	
+su - 用户名
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="小结"><a href="#小结" class="header-anchor">#</a> 小结</h2> <p>创建用户命令格式: sudo useradd -m 用户名 , 默认会创建一个同名的用户组。
+查看用户信息使用 id 命令或者 /etc/passwd文件
+查看用户组信息使用 /etc/group文件
+给用户设置密码使用 sudo passwd 用户名
+切换用户使用 su - 用户名</p> <h2 id="五、远程登录、远程拷贝"><a href="#五、远程登录、远程拷贝" class="header-anchor">#</a> 五、远程登录、远程拷贝</h2> <h2 id="远程登录、远程拷贝"><a href="#远程登录、远程拷贝" class="header-anchor">#</a> 远程登录、远程拷贝</h2> <table><thead><tr><th>命令</th> <th>说明</th></tr></thead> <tbody><tr><td>ssh</td> <td>远程登录</td></tr> <tr><td>scp</td> <td>远程拷贝</td></tr></tbody></table> <p>ssh格式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ssh 用户名@ip地址
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>scp格式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>远程拷贝文件
+scp 本地文件 远程服务器用户名@远程服务器ip地址:指定拷贝到远程服务器的路径
+scp 远程服务器用户名@远程服务器ip地址:远程服务器文件 指定拷贝到本地电脑的路径
+远程拷贝目标
+scp -r 本地目录 远程服务器用户名@远程服务器ip地址:指定拷贝到远程服务器的路径
+scp -r 远程服务器用户名@远程服务器ip地址:远程服务器目录 指定拷贝到本地电脑的路径
+-r 表示递归拷贝整个目录
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>ssh命令是远程登录主机电脑，相当于直接操作的是远程电脑。
+scp命令是可以完成远程拷贝操作，注意:拷贝文件夹需要加-r选项。</p> <h2 id="六、vim"><a href="#六、vim" class="header-anchor">#</a> 六、vim</h2> <h2 id="_1-安装"><a href="#_1-安装" class="header-anchor">#</a> 1.安装:</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code> yum -y install vim
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_2-命令"><a href="#_2-命令" class="header-anchor">#</a> 2.命令</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>:w 保存
+
+:q 退出
+
+:wq 保存退出
+
+:x 保存退出
+
+:q! 强制退出
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="_3-其他常用命令"><a href="#_3-其他常用命令" class="header-anchor">#</a> 3.其他常用命令</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>yy          复制光标所在行 *
+p           粘贴 *
+dd          删除/剪切当前行 *
+V           按行选中 *
+u           撤销
+ctr+r       反撤销
+&gt;&gt;          往右缩进
+&lt;&lt;          往左缩进
+:/搜索的内容  搜索指定内容 *
+:%s/要替换的内容/替换后的内容/g                          全局替换 *
+:开始行数,结束行数s/要替换的内容/替换后的内容 			    局部替换
+. 			重复上一次命令操作
+G 			回到最后一行
+gg 			回到第一行
+数字+G 	  回到指定行
+shift+6 	回到当前行的行首
+shift+4 	回到当前行的行末
+ctr+f 		下一屏
+ctr+b 		上一屏
+:set nu     显示行号
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="七、yum安装卸载"><a href="#七、yum安装卸载" class="header-anchor">#</a> 七、Yum安装卸载</h2> <h2 id="yum命令"><a href="#yum命令" class="header-anchor">#</a> Yum命令</h2> <table><thead><tr><th>命令</th> <th>说明</th></tr></thead> <tbody><tr><td>yum list installed</td> <td>显示已经安装的软件包</td></tr> <tr><td>yum list tomcat</td> <td>查找可以安装的软件包(以 tomcat为例)</td></tr> <tr><td>yum install -y vim</td> <td>安装vim软件包</td></tr> <tr><td>yum remove vim</td> <td>卸载vim软件包</td></tr></tbody></table> <div class="language- line-numbers-mode"><pre class="language-text"><code>CentOS操作系统安装和卸载软件有两种方式:
+安装命令: yum install -y 安装包
+卸载命令: yum remove 安装包
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="八、其他指令"><a href="#八、其他指令" class="header-anchor">#</a> 八、其他指令</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>ifconfig 			查看网卡的配置 （yum install -y net-tools）
+ifconfig ethX up 	启用 'ethX' 网卡设备信息
+ifconfig ethX down 	禁用 'ethX' 网卡设备信息
+ping IP/域名 		   测试从本机到对方网络的连通性
+du -h filename 		以适合的方式查看文件占用磁盘空间大小
+du -sh dirname 		查看指定文件目录下磁盘占用量
+tail -f filename 	动态显示文件内容(默认后10行) （可通过echo重定向演示）
+export 				环境变量查看
+export env=&quot;value&quot; 	添加环境变量
+wget url 			下载文件
+wget url -O filename 		下载文件并重命名
+uname -a 					显示内核版本
+cat /etc/redhat-release 	查看centos版本
+ps -aux 或 ps -ef 			显示进程状态
+kill pid 					停止某进程
+kill -9 pid 				强制杀掉进程
+history 	显示历史输入的命令
+top	动态的显示系统耗费资源最多的进程(P按cpu排序 M按memory排序 Q退出)
+poweroff 	关机
+reboot 	重启
+free 	显示内存使用情况( -k 以KB为单位，-m 以MB为单位，-g以GB为单位)
+systemctl status firewalld 	查看防火墙状态
+systemctl stop firewalld 	关闭防火墙
+netstat -an 	查看端口使用情况
+du -h --max-depth=0 *	 查看当前目录文件及文件夹大小
+ps -ef | grep 'xxx' |awk '{print $2}'|xargs kill -9 	停止包含xxx相关的进程
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----> <div class="comments-wrapper" data-v-4698c43e><!----></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div><!----><div></div><!----></div></div>
+    <script src="/assets/js/app.368f64c4.js" defer></script><script src="/assets/js/20.a07337f3.js" defer></script><script src="/assets/js/1.140bedef.js" defer></script><script src="/assets/js/49.5c8cc701.js" defer></script><script src="/assets/js/44.82d112be.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>07-软件测试整体框架 | 我的学习分享</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <script charset="utf-8" src="/js/custom.js"></script>
+    <meta name="description" content="己不由心，身又岂能由己。">
+    <meta name="keywords" content="Broad Tao,vuepress,自建博客,Broad Tao">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="robots" content="all">
+    <meta name="author" content="Broad Tao">
+    
+    <link rel="preload" href="/assets/css/0.styles.13129a82.css" as="style"><link rel="preload" href="/assets/js/app.368f64c4.js" as="script"><link rel="preload" href="/assets/js/20.a07337f3.js" as="script"><link rel="preload" href="/assets/js/1.140bedef.js" as="script"><link rel="preload" href="/assets/js/71.99cdd17c.js" as="script"><link rel="preload" href="/assets/js/44.82d112be.js" as="script"><link rel="prefetch" href="/assets/js/10.84a4bc76.js"><link rel="prefetch" href="/assets/js/11.74304a50.js"><link rel="prefetch" href="/assets/js/12.e5fdb1f3.js"><link rel="prefetch" href="/assets/js/13.7c977e56.js"><link rel="prefetch" href="/assets/js/14.9c9c6116.js"><link rel="prefetch" href="/assets/js/15.69860740.js"><link rel="prefetch" href="/assets/js/16.878c604a.js"><link rel="prefetch" href="/assets/js/17.f8be178b.js"><link rel="prefetch" href="/assets/js/18.8d2c943c.js"><link rel="prefetch" href="/assets/js/19.a3a4cb45.js"><link rel="prefetch" href="/assets/js/21.e1d85675.js"><link rel="prefetch" href="/assets/js/22.f950f59e.js"><link rel="prefetch" href="/assets/js/23.016eff4b.js"><link rel="prefetch" href="/assets/js/24.c274e618.js"><link rel="prefetch" href="/assets/js/25.1577a4bb.js"><link rel="prefetch" href="/assets/js/26.49375a6d.js"><link rel="prefetch" href="/assets/js/27.4ab97d60.js"><link rel="prefetch" href="/assets/js/28.c6e2060c.js"><link rel="prefetch" href="/assets/js/29.3f589d75.js"><link rel="prefetch" href="/assets/js/30.c91d0847.js"><link rel="prefetch" href="/assets/js/31.831f8840.js"><link rel="prefetch" href="/assets/js/32.e636b7e5.js"><link rel="prefetch" href="/assets/js/33.fccc87bd.js"><link rel="prefetch" href="/assets/js/34.a5aa89dc.js"><link rel="prefetch" href="/assets/js/35.c6d8ee42.js"><link rel="prefetch" href="/assets/js/36.29ada5a4.js"><link rel="prefetch" href="/assets/js/37.1076c222.js"><link rel="prefetch" href="/assets/js/38.0f14ec92.js"><link rel="prefetch" href="/assets/js/39.aa21d927.js"><link rel="prefetch" href="/assets/js/4.ef239fdc.js"><link rel="prefetch" href="/assets/js/40.25a83a4c.js"><link rel="prefetch" href="/assets/js/41.442cf9f8.js"><link rel="prefetch" href="/assets/js/42.190b3589.js"><link rel="prefetch" href="/assets/js/43.9d225e14.js"><link rel="prefetch" href="/assets/js/45.827d8704.js"><link rel="prefetch" href="/assets/js/46.fbf978bb.js"><link rel="prefetch" href="/assets/js/47.54b48594.js"><link rel="prefetch" href="/assets/js/48.5630b271.js"><link rel="prefetch" href="/assets/js/49.5c8cc701.js"><link rel="prefetch" href="/assets/js/5.567c18a5.js"><link rel="prefetch" href="/assets/js/50.a6e5dd21.js"><link rel="prefetch" href="/assets/js/51.c2ca8fc9.js"><link rel="prefetch" href="/assets/js/52.553b32c3.js"><link rel="prefetch" href="/assets/js/53.1345a25a.js"><link rel="prefetch" href="/assets/js/54.7d45901e.js"><link rel="prefetch" href="/assets/js/55.e642e2ff.js"><link rel="prefetch" href="/assets/js/56.91833c5a.js"><link rel="prefetch" href="/assets/js/57.39615577.js"><link rel="prefetch" href="/assets/js/58.4c444ea9.js"><link rel="prefetch" href="/assets/js/59.8e98294e.js"><link rel="prefetch" href="/assets/js/6.2939a692.js"><link rel="prefetch" href="/assets/js/60.749a855b.js"><link rel="prefetch" href="/assets/js/61.ce1190f8.js"><link rel="prefetch" href="/assets/js/62.afb3823d.js"><link rel="prefetch" href="/assets/js/63.299fb01e.js"><link rel="prefetch" href="/assets/js/64.81fbdf0b.js"><link rel="prefetch" href="/assets/js/65.c90ffa1c.js"><link rel="prefetch" href="/assets/js/66.e3ce52be.js"><link rel="prefetch" href="/assets/js/67.a9b2ef30.js"><link rel="prefetch" href="/assets/js/68.f180eddd.js"><link rel="prefetch" href="/assets/js/69.c8d6122a.js"><link rel="prefetch" href="/assets/js/7.71815629.js"><link rel="prefetch" href="/assets/js/70.b935c49c.js"><link rel="prefetch" href="/assets/js/72.580621cf.js"><link rel="prefetch" href="/assets/js/73.bc0dc747.js"><link rel="prefetch" href="/assets/js/74.da73099e.js"><link rel="prefetch" href="/assets/js/75.aeb7cdd0.js"><link rel="prefetch" href="/assets/js/76.f4f90de8.js"><link rel="prefetch" href="/assets/js/8.73301c16.js"><link rel="prefetch" href="/assets/js/9.2d4d0c4d.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.914d6aa8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.13129a82.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-4698c43e><div data-v-4698c43e><div id="loader-wrapper" class="loading-wrapper" data-v-1c4f0192 data-v-4698c43e data-v-4698c43e><div class="loader-main" data-v-1c4f0192><div data-v-1c4f0192></div><div data-v-1c4f0192></div><div data-v-1c4f0192></div><div data-v-1c4f0192></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-6cbeab0a data-v-4698c43e data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>我的学习分享</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>Broad Tao</span>
+            
+          <span data-v-6cbeab0a>2022 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-4698c43e><header class="navbar" data-v-4698c43e><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">我的学习分享</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/技术文章/项目/本网站的搭建服务器端.html" class="nav-link"><i class="iconfont reco-eye"></i>
+  项目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-faq"></i>
+      框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>spring</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring01/Spring_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-01
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring02/Spring_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-02
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring03/Spring_day03.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring AOP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-01/SpringMVC_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SpringMVC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-02/SpringMVC_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SSM整合
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Springboot/Springboot.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Springboot
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      JAVA
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/java/javase.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JavaSE
+</a></li></ul></li><li class="dropdown-item"><h4>JAVA WEB</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/javaweb/mysql/1、mysql安装.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MySQL
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JDBC/JDBC.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JDBC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Maven/Maven.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Maven
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/MyBatis/MyBatis1.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MyBatis
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/web核心/1、Web概述.html" class="nav-link"><i class="iconfont undefined"></i>
+  --HTTP&amp;Tomcat&amp;Servlet
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Request&amp;Response/Request&amp;Response.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Request&amp;Response
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JSP/JSP.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JSP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/会话技术/会话技术.html" class="nav-link"><i class="iconfont undefined"></i>
+  --会话技术
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Filter&amp;Listener&amp;Ajax/Filter&amp;Listener&amp;Ajax.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Filter&amp;Listener&amp;Ajax
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/VUE&amp;Element/VUE&amp;Element.html" class="nav-link"><i class="iconfont undefined"></i>
+  --VUE&amp;Element
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/综合案例/综合案例.html" class="nav-link"><i class="iconfont undefined"></i>
+  --综合案例
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/前端/html/html.html" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/css/2022-07-05-CSS.html" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/JavaScript/JavaScript.html" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      Python
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/python/python基础.html" class="nav-link"><i class="iconfont undefined"></i>
+  python基础
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/python/python爬虫.html" class="nav-link"><i class="iconfont undefined"></i>
+  python爬虫
+</a></li></ul></div></div><div class="nav-item"><a href="/技术文章/生活分享/分享.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  生活分享
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-4698c43e></div> <aside class="sidebar" data-v-4698c43e><div class="personal-info-wrapper" data-v-6c8ffc9c><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-6c8ffc9c> <h3 class="name" data-v-6c8ffc9c>
+    Broad Tao
+  </h3> <div class="num" data-v-6c8ffc9c><div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>25</h3> <h6 data-v-6c8ffc9c>文章</h6></div> <div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>31</h3> <h6 data-v-6c8ffc9c>标签</h6></div></div> <hr data-v-6c8ffc9c></div> <nav class="nav-links"><div class="nav-item"><a href="/技术文章/项目/本网站的搭建服务器端.html" class="nav-link"><i class="iconfont reco-eye"></i>
+  项目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-faq"></i>
+      框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>spring</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring01/Spring_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-01
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring02/Spring_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring IOC-02
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Spring Framework/spring03/Spring_day03.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Spring AOP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-01/SpringMVC_day01.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SpringMVC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/SpringMVC/SpringMVC-02/SpringMVC_day02.html" class="nav-link"><i class="iconfont undefined"></i>
+  --SSM整合
+</a></li><li class="dropdown-subitem"><a href="/技术文章/Spring/Springboot/Springboot.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Springboot
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      JAVA
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/java/javase.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JavaSE
+</a></li></ul></li><li class="dropdown-item"><h4>JAVA WEB</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/javaweb/mysql/1、mysql安装.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MySQL
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JDBC/JDBC.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JDBC
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Maven/Maven.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Maven
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/MyBatis/MyBatis1.html" class="nav-link"><i class="iconfont undefined"></i>
+  --MyBatis
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/web核心/1、Web概述.html" class="nav-link"><i class="iconfont undefined"></i>
+  --HTTP&amp;Tomcat&amp;Servlet
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Request&amp;Response/Request&amp;Response.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Request&amp;Response
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/JSP/JSP.html" class="nav-link"><i class="iconfont undefined"></i>
+  --JSP
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/会话技术/会话技术.html" class="nav-link"><i class="iconfont undefined"></i>
+  --会话技术
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/Filter&amp;Listener&amp;Ajax/Filter&amp;Listener&amp;Ajax.html" class="nav-link"><i class="iconfont undefined"></i>
+  --Filter&amp;Listener&amp;Ajax
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/VUE&amp;Element/VUE&amp;Element.html" class="nav-link"><i class="iconfont undefined"></i>
+  --VUE&amp;Element
+</a></li><li class="dropdown-subitem"><a href="/技术文章/javaweb/综合案例/综合案例.html" class="nav-link"><i class="iconfont undefined"></i>
+  --综合案例
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/前端/html/html.html" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/css/2022-07-05-CSS.html" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/前端/JavaScript/JavaScript.html" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      Python
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/技术文章/python/python基础.html" class="nav-link"><i class="iconfont undefined"></i>
+  python基础
+</a></li><li class="dropdown-item"><!----> <a href="/技术文章/python/python爬虫.html" class="nav-link"><i class="iconfont undefined"></i>
+  python爬虫
+</a></li></ul></div></div><div class="nav-item"><a href="/技术文章/生活分享/分享.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  生活分享
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>学习内容</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/技术文章/软件测试/学习内容/01-网络基础.html" class="sidebar-link">01-网络基础</a></li><li><a href="/技术文章/软件测试/学习内容/02-linux常用命令.html" class="sidebar-link">02-Linux常用命令</a></li><li><a href="/技术文章/软件测试/学习内容/03-MySql.html" class="sidebar-link">03-MySql</a></li><li><a href="/技术文章/软件测试/学习内容/04-软件测试.html" class="sidebar-link">04-软件测试</a></li><li><a href="/技术文章/软件测试/学习内容/05-测试用例.html" class="sidebar-link">05-测试用例</a></li><li><a href="/技术文章/软件测试/学习内容/06-常见的网页控件.html" class="sidebar-link">06-常见的网页控件</a></li><li><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html" class="active sidebar-link">07-软件测试整体框架</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_1、测试方法" class="sidebar-link">1、测试方法</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_2、项目架构" class="sidebar-link">2、项目架构</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_3、商业模式" class="sidebar-link">3、商业模式</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_4、测试用例八大要素" class="sidebar-link">4、测试用例八大要素</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_5、测试内容-维度-方面" class="sidebar-link">5、测试内容/维度/方面</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_6、测试阶段-级别" class="sidebar-link">6、测试阶段(级别)</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_7、公司工作模型-测试模型-w模型" class="sidebar-link">7、公司工作模型(测试模型,W模型)</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_8、软件测试结束标准" class="sidebar-link">8、软件测试结束标准</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_9、测试工作流程" class="sidebar-link">9、测试工作流程</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_10、测试计划" class="sidebar-link">10、测试计划</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_11、测试报告" class="sidebar-link">11、测试报告</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_12、缺陷报告-缺陷报告单" class="sidebar-link">12、缺陷报告（缺陷报告单）</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_13、缺陷状态" class="sidebar-link">13、缺陷状态</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_14、缺陷优先级" class="sidebar-link">14、缺陷优先级</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_15、缺陷级别" class="sidebar-link">15、缺陷级别</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_16、缺陷-类型-分类" class="sidebar-link">16、缺陷(类型)分类</a></li><li class="sidebar-sub-header"><a href="/技术文章/软件测试/学习内容/07-软件测试整体框架.html#_17、迭代-敏捷" class="sidebar-link">17、迭代/敏捷</a></li></ul></li><li><a href="/技术文章/软件测试/学习内容/商城测试点.html" class="sidebar-link">商城测试点</a></li><li><a href="/技术文章/软件测试/学习内容/背诵记忆.html" class="sidebar-link">背诵</a></li><li><a href="/技术文章/软件测试/学习内容/面试.html" class="sidebar-link">面试</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-6cbeab0a data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a></h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>Broad Tao</span>
+            
+          <span data-v-6cbeab0a>2022 - </span>
+          2023
+        </a></span></div></div> <div data-v-4698c43e><main class="page"><!----> <div class="page-title" style="display:none;"><h1>07-软件测试整体框架</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>Broad Tao</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="_07-软件测试整体框架"><a href="#_07-软件测试整体框架" class="header-anchor">#</a> 07-软件测试整体框架</h1> <h2 id="_1、测试方法"><a href="#_1、测试方法" class="header-anchor">#</a> 1、测试方法</h2> <div class="language- extra-class"><pre><code>白盒测试
+	代码层逻辑测试
+灰盒测试
+	API接口测试
+黑盒测试
+	等价类
+		输入项
+	边界值
+		输入项(等价类补充)
+	判定表
+		多条件组合
+	因果图
+		判定表的逻辑分析
+	正交表
+		多条件组合
+	场景法
+		基本流和备选流
+	错误推测
+		经验
+</code></pre></div><h2 id="_2、项目架构"><a href="#_2、项目架构" class="header-anchor">#</a> 2、项目架构</h2> <div class="language- extra-class"><pre><code>CS架构
+	客户端-服务器
+BS架构
+	浏览器-服务器
+小程序
+</code></pre></div><h2 id="_3、商业模式"><a href="#_3、商业模式" class="header-anchor">#</a> 3、商业模式</h2> <div class="language- extra-class"><pre><code>O2O
+	线上(online)对线下(offline)
+B2B
+	企业对企业（阿里巴巴）
+B2C
+	企业对个人（小米商城）
+C2C
+	个人对个人（闲鱼）
+B2B2C
+	企业对企业对个人（天猫）
+</code></pre></div><h2 id="_4、测试用例八大要素"><a href="#_4、测试用例八大要素" class="header-anchor">#</a> 4、测试用例八大要素</h2> <div class="language- extra-class"><pre><code>用例编号、用例标题、测试模块、用例级别、预置条件、测试输入、操作步骤、预期结果
+</code></pre></div><h2 id="_5、测试内容-维度-方面"><a href="#_5、测试内容-维度-方面" class="header-anchor">#</a> 5、测试内容/维度/方面</h2> <div class="language- extra-class"><pre><code>功能
+	表单测试
+		输入框
+			一般使用等价类划分法、边界值
+	搜索筛选测试
+		多条件搜索 长度限制  模糊搜索  精确搜索  存在数据搜索  不存在搜索 为空搜索
+	链接测试
+		点击连接查看是否能正常跳转
+		查看是否是在当前页面打开新的页面
+	数据交互测试
+		数据有没有到达各个模块  列：员工信息  人事有一份  老板有一份  主管有一份
+	业务间逻辑测试
+		实际的业务逻辑如增删改查是否真正的实现
+界面(UI)
+	布局、颜色，风格，大小、字体，错别字，超长显示
+易用性
+	新功能引导、易于操作，快捷键、流程是否简洁
+安全
+	敏感信息是否加密、传输过程中是否加密、越权访问、安装包反编译、cookie安全
+兼容
+	BS架构
+		浏览器版本
+			浏览器内核
+				ie、谷歌、火狐
+		分辨率
+		操作系统
+	CS架构
+		系统，系统版本、机型、尺寸，分辨率
+性能
+	负载、压力、稳定性、极限后恢复时间
+</code></pre></div><h2 id="_6、测试阶段-级别"><a href="#_6、测试阶段-级别" class="header-anchor">#</a> 6、测试阶段(级别)</h2> <div class="language- extra-class"><pre><code>单元测试
+集成测试
+系统测试
+	功能回归测试、系统回归测试
+验收测试
+	alpha测试、beta测试
+</code></pre></div><h2 id="_7、公司工作模型-测试模型-w模型"><a href="#_7、公司工作模型-测试模型-w模型" class="header-anchor">#</a> 7、公司工作模型(测试模型,W模型)</h2> <div class="language- extra-class"><pre><code>需求分析（验收系统测试设计）、概要设计（集成测试设计）、详细设计（单元测试设计）、编码
+单元测试、集成测试、系统测试、验收测试
+</code></pre></div><h2 id="_8、软件测试结束标准"><a href="#_8、软件测试结束标准" class="header-anchor">#</a> 8、软件测试结束标准</h2> <div class="language- extra-class"><pre><code>测试用例完全覆盖功能点（需求）
+测试用例完全执行
+缺陷密度符合需求
+通过标准
+	1.Bug修复率95%以上，不存在一般级别以上的bug
+	2.一般级别以下的bug需要经过产品经理或者项目负责人决定可遗留数量
+质量评估（缺陷率）
+	DI=致命*10+严重*3+一般*1+较小*0.1
+</code></pre></div><h2 id="_9、测试工作流程"><a href="#_9、测试工作流程" class="header-anchor">#</a> 9、测试工作流程</h2> <div class="language- extra-class"><pre><code>需求评审
+	人/内容/测试做什么
+编写测试计划
+	内容
+测试任务划分
+设计测试用例
+	怎么设计的/设计方法/哪方面（冒烟/系统）/用例模板
+编写测试用例
+	项目总共条，你设计了多少
+测试用例评审
+	人（开发+测试）/评审内容
+执行测试用例
+	执行标准
+缺陷bug管理跟踪
+	工具/bug流转过程/如何划分等级的/缺陷报告内容
+编写测试报告
+	内容/上线标准
+</code></pre></div><h2 id="_10、测试计划"><a href="#_10、测试计划" class="header-anchor">#</a> 10、测试计划</h2> <div class="language- extra-class"><pre><code>测试背景、测试环境、测试目的、测试方法、测试模块、人员安排、里程碑、风险分析、开始,挂起,结束标准
+</code></pre></div><h2 id="_11、测试报告"><a href="#_11、测试报告" class="header-anchor">#</a> 11、测试报告</h2> <div class="language- extra-class"><pre><code>项目概述、测试环境、功能清单、缺陷统计、测试总结、风险预估
+</code></pre></div><h2 id="_12、缺陷报告-缺陷报告单"><a href="#_12、缺陷报告-缺陷报告单" class="header-anchor">#</a> 12、缺陷报告（缺陷报告单）</h2> <div class="language- extra-class"><pre><code>缺陷ID
+缺陷标题
+缺陷详细描述
+	复现步骤
+	预期及实际结果
+	附件截图视频
+缺陷模块
+严重程度
+优先级
+发现人
+处理人
+缺陷状态
+</code></pre></div><h2 id="_13、缺陷状态"><a href="#_13、缺陷状态" class="header-anchor">#</a> 13、缺陷状态</h2> <div class="language- extra-class"><pre><code>new(创建)
+open(已打开)
+fixed(已修复)
+closed(关闭)
+reopen(重新打开)
+postpone(推迟处理)
+rejected(拒接)
+duplicate(重复bug)
+abandon(放弃)
+</code></pre></div><h2 id="_14、缺陷优先级"><a href="#_14、缺陷优先级" class="header-anchor">#</a> 14、缺陷优先级</h2> <div class="language- extra-class"><pre><code>P1(立即)
+P2(优先)
+P3(正常)
+P4(低)
+</code></pre></div><h2 id="_15、缺陷级别"><a href="#_15、缺陷级别" class="header-anchor">#</a> 15、缺陷级别</h2> <div class="language- extra-class"><pre><code>fatal(致命)
+critical(严重)
+major(一般)
+minor(较小)
+enhancemental(建议)
+</code></pre></div><h2 id="_16、缺陷-类型-分类"><a href="#_16、缺陷-类型-分类" class="header-anchor">#</a> 16、缺陷(类型)分类</h2> <div class="language- extra-class"><pre><code>文档缺陷（需求文档，用户手册）
+	术语不一致、文档缺失、编辑错误
+设计缺陷
+	需求缺陷、设计不合理
+功能性缺陷
+	需求功能是否实现
+界面缺陷
+	界面风格一致、控件排列整齐
+性能缺陷
+	业务处理时间、业务处理效率
+可靠性缺陷
+	用户权限,越权
+配置缺陷
+	配置文件问题、初始化问题、部署问题
+数据校验缺陷
+	空值、数据长度
+查询统计缺陷
+	统计准确性
+</code></pre></div><h2 id="_17、迭代-敏捷"><a href="#_17、迭代-敏捷" class="header-anchor">#</a> 17、迭代/敏捷</h2> <div class="language- extra-class"><pre><code>迭代包括产生产品发布（稳定、可执行的产品版本）的全部开发活动和要使用该发布必需的所有其他外围元素。在某种程度上，开发迭代是一次 完整地经过所有工作流程的过程：需求分析、设计、实施和测试工作流程。实质上，它类似小型的瀑布式项目。RUP认为，所有的阶段都可以细分为迭代。每一次 的迭代都会产生一个可以发布的产品，这个产品是最终产品的一个子集。</code></pre></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----> <div class="comments-wrapper" data-v-4698c43e><!----></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div><!----><div></div><!----></div></div>
+    <script src="/assets/js/app.368f64c4.js" defer></script><script src="/assets/js/20.a07337f3.js" defer></script><script src="/assets/js/1.140bedef.js" defer></script><script src="/assets/js/71.99cdd17c.js" defer></script><script src="/assets/js/44.82d112be.js" defer></script>
+  </body>
+</html>
